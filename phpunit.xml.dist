@@ -11,7 +11,7 @@
         verbose="false"
         >
          <testsuites>
-            <testsuite name="Dividas dos Clientes">
+            <testsuite name="techstone">
                 <directory>./tests/</directory>
             </testsuite>
          </testsuites>
