@@ -1,0 +1,32 @@
+{
+    "name": "erickfirmo/techstone",
+    "description": "Desenvolvimento Web",
+    "keywords": ["sites", "lojas virtuais", "sistemas", "google adwords"],
+    "license": "MIT",
+    "type": "project",
+
+    "require": {
+        "php": "^7.1.11"
+        
+    },
+
+    "autoload": {
+        "psr-4": {
+             "Core\\": "Core/",
+             "App\\": "App/",
+             "Tests\\": "tests/"
+        },
+
+        "classmap": [
+            "database"
+        ]
+        
+
+        
+
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
