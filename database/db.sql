@@ -28,5 +28,10 @@ CREATE TABLE `post`(
     `id` INT NOT NULL AUTO_INCREMENT,
     `titulo` varchar(20) NOT NULL,
     `conteudo` varchar(100) NOT NULL,
-    `imagem` varchar(80) NOT NULL UNIQUE
+    `imagem` varchar(255) NOT NULL UNIQUE,
+    PRIMARY KEY(`id`)
 );
+
+
+
+

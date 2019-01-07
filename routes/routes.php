@@ -5,14 +5,39 @@
 return [
 
     '/' => [
-        'action' => 'HomeController@index',
+        'action' => 'Site\SiteController@index',
+        'method' => 'GET'
+    ],
+
+    '/sobre/' => [
+        'action' => 'Site\SiteController@sobre',
+        'method' => 'GET'
+    ],
+
+    '/servicos/' => [
+        'action' => 'Site\SiteController@servicos',
+        'method' => 'GET'
+    ],
+
+    '/portfolio/' => [
+        'action' => 'Site\SiteController@portfolio',
         'method' => 'GET'
     ],
 
     '/contato/' => [
-        'action' => 'SiteController@index',
+        'action' => 'Site\SiteController@contato',
         'method' => 'GET'
     ],
+
+    /* rotas admin */
+
+    '/admin/home/' => [
+        'action' => 'Admin\HomeController@index',
+        'method' => 'GET'
+    ],
+
+
+    /* rotas dos posts */
 
     '/admin/posts/' => [
         'action' => 'PostController@index',
