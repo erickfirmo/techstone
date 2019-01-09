@@ -1,0 +1,31 @@
+.p-40 {
+  padding: 40px; }
+
+.p-20 {
+  padding: 20px; }
+
+/* portifolio */
+#portfolio * {
+  height: 100px; }
+#portfolio .portfolio-1 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+#portfolio .portfolio-2 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+#portfolio .portfolio-3 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+#portfolio .portfolio-4 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+#portfolio .portfolio-5 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+#portfolio .portfolio-6 {
+  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+
+.solid * {
+  color: #fff;
+  font-weight: 600; }
+
+.footer {
+  position: relative;
+  bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */

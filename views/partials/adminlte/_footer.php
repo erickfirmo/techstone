@@ -5,5 +5,5 @@
       Versão 1.0
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2018 <a href="#">TechStone</a>.</strong> Todos os Direitos Reservados.
+    <strong>Copyright &copy; 2019 <a href="#">TechStone</a>.</strong> Todos os Direitos Reservados.
 </footer>

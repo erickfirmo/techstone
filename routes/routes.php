@@ -14,13 +14,28 @@ return [
         'method' => 'GET'
     ],
 
-    '/servicos/' => [
-        'action' => 'Site\SiteController@servicos',
+    '/produtos/' => [
+        'action' => 'Site\SiteController@produtos',
         'method' => 'GET'
     ],
 
     '/portfolio/' => [
         'action' => 'Site\SiteController@portfolio',
+        'method' => 'GET'
+    ],
+
+    '/adwords/' => [
+        'action' => 'Site\SiteController@adwords',
+        'method' => 'GET'
+    ],
+
+    '/criacao_de_sites/' => [
+        'action' => 'Site\SiteController@criacao_de_sites',
+        'method' => 'GET'
+    ],
+
+    '/lojas_virtuais/' => [
+        'action' => 'Site\SiteController@lojas_virtuais',
         'method' => 'GET'
     ],
 

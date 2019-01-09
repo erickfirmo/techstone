@@ -21,13 +21,33 @@ class SiteController extends Controller
         return $this->view('/site/sobre');
     }
 
-    public function servicos()
+    public function produtos()
     {
-        return $this->view('/site/servicos');
+        return $this->view('/site/produtos');
     }
 
     public function portfolio()
     {
         return $this->view('/site/portfolio');
+    }
+
+    public function lojas_virtuais()
+    {
+        return $this->view('/site/lojas-virtuais');
+    }
+
+    public function criacao_de_sites()
+    {
+        return $this->view('/site/criacao-de-sites');
+    }
+
+    public function adwords()
+    {
+        return $this->view('/site/adwords');
+    }
+
+    public function contato()
+    {
+        return $this->view('/site/contato');
     }
 }
