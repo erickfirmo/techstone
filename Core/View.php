@@ -14,6 +14,7 @@ class View
         require_once __DIR__.'/../helpers/route.php';
         require_once __DIR__.'/../helpers/url.php';
         require_once __DIR__.'/../helpers/partial.php';
+
         $this->tokenGenerator();
     }
 

@@ -1,25 +1,73 @@
+header#header nav {
+  background-color: #FFF;
+  padding: 30px; }
+  header#header nav a.navbar-brand {
+    /**/ }
+  header#header nav div.background-menu ul li.nav-item a.nav-link.item-menu {
+    color: #1d8fbd;
+    padding-left: 56px; }
+  header#header nav div.background-menu ul li.nav-item a.item-menu.active {
+    color: #fb695a; }
+  header#header nav div.background-menu ul li.nav-item a.item-menu:active {
+    color: #00c3ff; }
+  header#header nav div.background-menu ul li.nav-item a.item-menu:hover {
+    color: #00c3ff; }
+  header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu {
+    color: #1d8fbd; }
+  header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu:active {
+    background-color: #FFF; }
+  header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu.active {
+    color: #FFF;
+    background-color: #fb695a; }
+  header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu.active:active {
+    background-color: #1d8fbd;
+    color: #FFF; }
+
+@media screen and (max-width: 992px) {
+  header#header nav {
+    background-color: #FFF;
+    padding: 0; }
+    header#header nav a.navbar-brand {
+      /**/ }
+    header#header nav div.background-menu {
+      padding: 20px;
+      background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png");
+      background-position: auto; }
+      header#header nav div.background-menu ul li.nav-item a.nav-link.item-menu {
+        color: #FFF; }
+      header#header nav div.background-menu ul li.nav-item a.item-menu.active {
+        color: #fb695a; }
+      header#header nav div.background-menu ul li.nav-item a.item-menu:hover {
+        color: #00c3ff; }
+      header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu {
+        color: #1d8fbd; }
+      header#header nav div.background-menu ul li.nav-item div.dropdown-menu a.item-menu.active {
+        color: #FFF;
+        background-color: #fb695a; }
+    header#header nav .button-toggler-menu {
+      border-radius: 50%;
+      height: 56px;
+      border: none;
+      z-index: 10;
+      margin-right: 22px;
+      padding: 5px; }
+      header#header nav .button-toggler-menu a.navbar-brand {
+        margin-left: 0; }
+        header#header nav .button-toggler-menu a.navbar-brand img.logo {
+          width: 100px; } }
+* {
+  font-family: 'Roboto', sans-serif; }
+
 .p-40 {
   padding: 40px; }
 
 .p-20 {
   padding: 20px; }
 
-/* portifolio */
-#portfolio * {
-  height: 100px; }
-#portfolio .portfolio-1 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
-#portfolio .portfolio-2 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
-#portfolio .portfolio-3 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
-#portfolio .portfolio-4 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
-#portfolio .portfolio-5 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
-#portfolio .portfolio-6 {
-  background-image: "http://s2.glbimg.com/WURB_uyIxHrXlRgnt4tZ6Kw0sHk=/0x0:950x745/690x541/s.glbimg.com/es/ge/f/original/2014/09/01/site_realmadrid_95.jpg"; }
+.title-page {
+  background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png"); }
 
+/* portifolio */
 .solid * {
   color: #fff;
   font-weight: 600; }

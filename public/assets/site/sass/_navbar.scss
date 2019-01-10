@@ -1,0 +1,113 @@
+header#header {
+    nav {
+        background-color: #FFF;
+        padding: 30px;
+        
+            a.navbar-brand {
+                /**/
+            }
+
+            div.background-menu {
+                ul {
+                    li.nav-item {
+                        a.nav-link.item-menu {
+                            color: $primary-color;
+                            padding-left: 56px;
+                        }
+                        a.item-menu.active {
+                            color: $secondary-color;
+                        }
+                        a.item-menu:active {
+                            color: rgb(0, 195, 255);
+                        }
+                        a.item-menu:hover {
+                            color: rgb(0, 195, 255);
+                        }
+                        div.dropdown-menu {
+                            a.item-menu {
+                                color: $primary-color;
+                            }
+                            a.item-menu:active {
+                                background-color: #FFF;
+                            }
+                            a.item-menu.active {
+                                color: #FFF;
+                                background-color: $secondary-color;
+                            }
+                            a.item-menu.active:active {
+                                background-color: $primary-color;
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+@media screen and (max-width: $break-medium) {
+    header#header {
+        nav {
+            background-color: #FFF;
+            padding: 0;
+            
+                a.navbar-brand {
+                    /**/
+                }
+    
+                div.background-menu {
+                    
+                    padding: 20px;
+                    background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png');
+                    background-position: auto;
+                    ul {
+                        li.nav-item {
+                            a.nav-link.item-menu {
+                                color: #FFF;
+                            }
+                            a.item-menu.active {
+                                color: $secondary-color;
+                            }
+                            a.item-menu:hover {
+                                color: rgb(0, 195, 255);
+                            }
+    
+                            div.dropdown-menu {
+                                a.item-menu {
+                                    color: $primary-color;
+                                }
+                                a.item-menu.active {
+                                    color: #FFF;
+                                    background-color: $secondary-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .button-toggler-menu {
+                    border-radius: 50%;
+                    height: 56px;
+                    border: none;
+                    z-index: 10; 
+                    margin-right: 22px;
+                    padding: 5px;
+                    a.navbar-brand {
+                        margin-left: 0;
+                        img.logo {
+                            width: 100px;
+                        }
+                    }
+                    
+            
+                }
+    
+            
+        }
+    
+        
+    }
+    
+}
+
+
+

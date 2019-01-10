@@ -6,10 +6,6 @@ use App\Controllers\Controller;
 
 class SiteController extends Controller 
 {
-    public function __construct()
-    {
-        $this->middleware('admin');
-    }
 
     public function index()
     {
