@@ -1,27 +1,28 @@
-header#header nav {
+header#header nav.navbar {
   background-color: #FFF;
+  padding: 26px;
   z-index: 30;
   transition-duration: 0.6s; }
-  header#header nav a.navbar-brand {
+  header#header nav.navbar a.navbar-brand {
     margin-left: 30px;
     width: 204px; }
-  header#header nav div ul li.nav-item a.nav-link.item-menu {
+  header#header nav.navbar div ul li.nav-item a.nav-link.item-menu {
     color: #1d8fbd;
     padding-left: 56px; }
-  header#header nav div ul li.nav-item a.item-menu.active {
+  header#header nav.navbar div ul li.nav-item a.item-menu.active {
     color: #ffc107; }
-  header#header nav div ul li.nav-item a.item-menu:active {
+  header#header nav.navbar div ul li.nav-item a.item-menu:active {
     color: #00c3ff; }
-  header#header nav div ul li.nav-item a.item-menu:hover {
+  header#header nav.navbar div ul li.nav-item a.item-menu:hover {
     color: #00c3ff; }
-  header#header nav div ul li.nav-item div.dropdown-menu a.item-menu {
+  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu {
     color: #1d8fbd; }
-  header#header nav div ul li.nav-item div.dropdown-menu a.item-menu:active {
+  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu:active {
     background-color: #FFF; }
-  header#header nav div ul li.nav-item div.dropdown-menu a.item-menu.active {
+  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu.active {
     color: #FFF;
     background-color: #ffc107; }
-  header#header nav div ul li.nav-item div.dropdown-menu a.item-menu.active:active {
+  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu.active:active {
     background-color: #1d8fbd;
     color: #FFF; }
 
