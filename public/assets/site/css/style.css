@@ -1,11 +1,10 @@
 header#header nav {
   background-color: #FFF;
-  padding: 18px; }
+  z-index: 30;
+  transition-duration: 0.6s; }
   header#header nav a.navbar-brand {
     margin-left: 30px;
     width: 204px; }
-    header#header nav a.navbar-brand img.logo-mini {
-      height: 34px; }
   header#header nav div ul li.nav-item a.nav-link.item-menu {
     color: #1d8fbd;
     padding-left: 56px; }
@@ -25,13 +24,20 @@ header#header nav {
   header#header nav div ul li.nav-item div.dropdown-menu a.item-menu.active:active {
     background-color: #1d8fbd;
     color: #FFF; }
-header#header nav.main-mini-navbar {
-  height: 50px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 15; }
 
+@media screen and (min-width: 992px) {
+  img.logo-mini {
+    transition-duration: 0.6s;
+    transform: scale(0.8); }
+
+  header#header nav.navbar-scroll {
+    background: #ffffff;
+    padding: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.6s;
+    position: fixed;
+    top: 0;
+    width: 100%; } }
 @media screen and (max-width: 992px) {
   header#header nav {
     background-color: #FFF;

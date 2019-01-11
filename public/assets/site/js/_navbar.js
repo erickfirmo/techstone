@@ -1,25 +1,16 @@
-var header = $('#header');
-var navigation = $('nav#main-navigation');
-var navigationDown = false;
+var navbar = $('nav#main-navigation');
 var logo = $('#logo');
 
-function changeNavbar(down) {
-    navigation.toggleClass('main-mini-navbar');
-    logo.toggleClass('logo-mini');
-    navigationDown = down;
-}
+$(function(){	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= 40){
+            navbar.removeClass('navbar-scroll');
+            logo.removeClass('logo-mini');
 
-$(window).scroll(function() {
-    if($(this).scrollTop() > header.height()-60 && $(this).scrollTop() < header.height()+20) {
-        if(navigationDown == true) {
-            changeNavbar(true);
-        } else if(navigationDown == false) {
-            changeNavbar(false);
-        }
-    }
-})
+		} else {
+            navbar.addClass('navbar-scroll');
+            logo.addClass('logo-mini');
 
-$(document).ready(function() {
-    changeNavbar(true);
+		}
+	});
 });
-
