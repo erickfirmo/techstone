@@ -1,13 +1,13 @@
 <div id="main-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active slider-item-1">
-        <img class="d-block w-100" src="http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png" alt="First slide">
+        <img class="d-block w-100" src="http://gehost.com.br/wp-content/uploads/2016/02/Banner-sites.jpg" alt="First slide">
         </div>
         <div class="carousel-item slider-item-2">
-        <img class="d-block w-100" src="http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png" alt="Second slide">
+        <img class="d-block w-100" src="http://gehost.com.br/wp-content/uploads/2016/02/Banner-sites.jpg" alt="Second slide">
         </div>
         <div class="carousel-item slider-item-3">
-        <img class="d-block w-100" src="http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png" alt="Third slide">
+        <img class="d-block w-100" src="http://gehost.com.br/wp-content/uploads/2016/02/Banner-sites.jpg" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#main-slider" role="button" data-slide="prev">

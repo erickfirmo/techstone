@@ -19,7 +19,7 @@
 <script src="<?php url('/node_modules/popper.js/dist/umd/popper.min.js'); ?>"></script>
 <script src="<?php url('/node_modules/bootstrap/dist/js/bootstrap.js'); ?>"></script>
 
-<script src="<?php url('/assets/site/js/responsive_navbar_left.js'); ?>"></script>
+<script src="<?php url('/assets/site/js/_navbar.js'); ?>"></script>
 
 </body>
 </html>

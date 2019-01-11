@@ -1,10 +1,25 @@
+@keyframes toggle-menu {
+    from {
+        height: inherit;
+    }
+    to {
+        height: 0px;
+    }
+}
+
 header#header {
     nav {
         background-color: #FFF;
-        padding: 30px;
+        padding: 18px;
+        
         
             a.navbar-brand {
-                /**/
+                margin-left: 30px;
+                width: 204px;
+
+                img.logo-mini {
+                    height: 34px;
+                }
             }
 
             div.background-menu {
@@ -43,7 +58,17 @@ header#header {
                 }
             }
     }
+
+    nav.main-mini-navbar {
+        height: 50px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 15;
+        
+    }
 }
+
 
 @media screen and (max-width: $break-medium) {
     header#header {
@@ -52,7 +77,11 @@ header#header {
             padding: 0;
             
                 a.navbar-brand {
-                    /**/
+                    padding: 40px 0;
+                    img {
+                        width: 664px;
+                        margin-left: 30px;
+                    }
                 }
     
                 div.background-menu {
@@ -60,10 +89,17 @@ header#header {
                     padding: 20px;
                     background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png');
                     background-position: auto;
+                    background-size: cover;
+ 
+
+                    z-index: 10;
                     ul {
                         li.nav-item {
+
                             a.nav-link.item-menu {
                                 color: #FFF;
+                                font-size: 54px;
+
                             }
                             a.item-menu.active {
                                 color: $secondary-color;
@@ -75,6 +111,7 @@ header#header {
                             div.dropdown-menu {
                                 a.item-menu {
                                     color: $primary-color;
+                                    font-size: 54px;
                                 }
                                 a.item-menu.active {
                                     color: #FFF;
@@ -82,6 +119,8 @@ header#header {
                                 }
                             }
                         }
+
+                        
                     }
                 }
                 .button-toggler-menu {
@@ -90,19 +129,15 @@ header#header {
                     border: none;
                     z-index: 10; 
                     margin-right: 22px;
-                    padding: 5px;
-                    a.navbar-brand {
-                        margin-left: 0;
-                        img.logo {
-                            width: 100px;
-                        }
-                    }
+                    height: 120px;
+                    font-size: 74px; 
                     
             
                 }
     
             
         }
+        
     
         
     }
