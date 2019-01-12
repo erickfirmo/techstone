@@ -1,0 +1,89 @@
+%button{
+    box-shadow: 1px 2px 2px #ccc;
+    padding: 10px 14px;
+    text-transform: uppercase;
+}
+
+%button-hover{
+    box-shadow: 1px 2px 2px #ccc;
+    background-color: transparent; 
+    transform: scale(1.1);
+}
+
+%button-action{
+    box-shadow: 1px 2px 2px #ccc;
+    background-color: transparent; 
+    transform: scale(1.1);
+}
+
+%button-primary{
+    background-color: $primary-color; 
+    border-color: $primary-color;
+}
+
+%button-danger{
+    background-color: $secondary-color; 
+    border-color: $secondary-color;
+}
+
+%button-outline {
+    border-color: #FFF;
+    transition-duration: 0.3s;
+}
+
+%button-outline-hover {
+    border-color: #FFF;
+    background-color: #FFF; 
+}
+
+.btn-danger {
+    @extend %button-danger;
+    @extend %button;
+}
+
+.btn-danger:hover {
+    border-color: $secondary-color;  
+    color: $secondary-color;
+    @extend %button-hover;
+}
+
+.btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled).active, .show > .btn-danger.dropdown-toggle{
+    @extend %button-danger;
+}
+
+.btn-outline-danger {
+    background-color: $secondary-color; 
+    @extend %button-outline;
+}
+
+.btn-outline-danger:hover {
+    color: $secondary-color;
+    @extend %button-outline-hover;
+}
+
+.btn-primary {
+    @extend %button-primary;
+    @extend %button;
+}
+
+.btn-primary:hover {
+    background-color: transparent; 
+    border-color: $primary-color;  
+    color: $primary-color;
+    @extend %button-hover;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle{
+    @extend %button-primary;
+}
+
+.btn-outline-primary {
+    background-color: $primary-color; 
+    @extend %button-outline;
+
+}
+
+.btn-outline-primary:hover {
+    color: $primary-color;
+    @extend %button-outline-hover;
+}

@@ -8,14 +8,14 @@ if(!defined('LAYOUT')) return 'site';
 
 <!-- chamada orçamento -->
 
-<div class="container-fluid p-20 bg-light">
+<div class="container-fluid bg-danger solid p-20">
     <div class="container">
         <div class="row">
             <div class="col-md-9">
-                <h3>Faça seu orçamento agora mesmo</h3>
+                <h3>Faça uma simulação</h3>
             </div>
             <div class="col-md-3">
-                <button class="btn btn-primary" href="#">Faça seu Orçamento</button>
+                <button class="btn btn-outline-danger btn-lg" href="#">Faça seu Orçamento</button>
             </div>
         </div>
     </div>
@@ -23,22 +23,22 @@ if(!defined('LAYOUT')) return 'site';
 
 <!-- produtos / serviços -->
 <div class="container p-40" id="produtos">
-    <h2 class="d-flex justify-content-left">Produtos</h2>
+    <h2 class="d-flex justify-content-left mb-4">Produtos</h2>
     <br>
     <div class="row">
         <div class="col-sm-4 col-md-4 col-sx-4 col-lg-4">
-        <i class="fas fa-laptop-code"></i>
-            <p>Lorem ipsum dolor sit amet</p>      
-
+            <i class="fas fa-laptop-code d-flex justify-content-center mx-auto mb-3"></i>
+            <p class="text-center">Lorem ipsum dolor sit amet cras niet lorem cadilac.</p>      
         </div>
         <div class="col-sm-4 col-md-4 col-sx-4 col-lg-4">
-        <i class="fas fa-laptop-code"></i>
-            <p>Lorem ipsum dolor sit amet</p>      
-
+            <div class="d-block mx-auto">
+                <i class="fas fa-laptop-code d-flex justify-content-center mx-auto mb-3"></i>
+            </div>
+            <p class="text-center">Lorem ipsum dolor sit amet cras niet lorem cadilac.</p>      
         </div>
         <div class="col-sm-4 col-md-4 col-sx-4 col-lg-4">
-        <i class="fas fa-laptop-code"></i>
-            <p>Lorem ipsum dolor sit amet</p>      
+            <i class="fas fa-laptop-code d-flex justify-content-center mx-auto mb-3"></i>
+            <p class="text-center">Lorem ipsum dolor sit amet cras niet lorem cadilac.</p>      
         </div>
     </div>
 </div>

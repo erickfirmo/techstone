@@ -1,9 +1,28 @@
-@import '_colors';
 @import '_breaks';
-@import '_topbar';
-@import '_navbar';
-@import '_footer';
+@import '_colors';
 
+/* _brackgrounds */
+@import '_backgrounds';
+/* _buttons */
+@import '_buttons';
+/* _topbar */
+@import '_topbar';
+/* _navbar. */
+@import '_navbar';
+/* _footer */
+@import '_footer';
+/* _produtos-home. */
+@import '_produtos-home';
+/* _portfolio. */
+@import '_portfolio';
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: $primary-color;
+}
 
 .m-40 {
     margin: 40px;
@@ -17,6 +36,12 @@
     margin: 10px;
 }
 
+
+.m-6 {
+    margin: 10px;
+}
+
+
 .p-40 {
     padding: 40px;
 }
@@ -27,6 +52,10 @@
 
 .p-10 {
     padding: 10px;
+}
+
+.p-6 {
+    padding: 6px;
 }
 
 .title-page {

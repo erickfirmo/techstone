@@ -1,4 +1,4 @@
-<div id="topbar" class="p-10 container-fluid solid">
+<div id="topbar" class="p-6 container-fluid solid">
     <div class="container nav-container">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-2 col-lg-3 col-xl-3">

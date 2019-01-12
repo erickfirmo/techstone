@@ -7,7 +7,7 @@
             <button id="nav-button" class="navbar-toggler navbar-toggler-right button-toggler-menu" type="button" data-toggle="collapse"  data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="navbarText" class="navbar-collapse collapse background-menu" style="">
+            <div id="navbarText" class="navbar-collapse collapse" >
                 <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link item-menu<?php classActiveUrl('/'); ?>" href="<?php url('/'); ?>">Home</a>

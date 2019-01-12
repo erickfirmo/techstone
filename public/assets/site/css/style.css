@@ -1,3 +1,62 @@
+/* _brackgrounds */
+.bg-primary {
+  background-color: #1d8fbd !important; }
+
+.bg-danger {
+  background-color: #fb695a !important; }
+
+.bg-image-1 {
+  background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png); }
+
+/* _buttons */
+.btn-danger, .btn-primary {
+  box-shadow: 1px 2px 2px #ccc;
+  padding: 10px 14px;
+  text-transform: uppercase; }
+
+.btn-danger:hover, .btn-primary:hover {
+  box-shadow: 1px 2px 2px #ccc;
+  background-color: transparent;
+  transform: scale(1.1); }
+
+.btn-primary, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary.active:not(:disabled):not(.disabled), .show > .btn-primary.dropdown-toggle {
+  background-color: #1d8fbd;
+  border-color: #1d8fbd; }
+
+.btn-danger, .btn-danger:not(:disabled):not(.disabled):active, .btn-danger.active:not(:disabled):not(.disabled), .show > .btn-danger.dropdown-toggle {
+  background-color: #fb695a;
+  border-color: #fb695a; }
+
+.btn-outline-danger, .btn-outline-primary {
+  border-color: #FFF;
+  transition-duration: 0.3s; }
+
+.btn-outline-danger:hover, .btn-outline-primary:hover {
+  border-color: #FFF;
+  background-color: #FFF; }
+
+.btn-danger:hover {
+  border-color: #fb695a;
+  color: #fb695a; }
+
+.btn-outline-danger {
+  background-color: #fb695a; }
+
+.btn-outline-danger:hover {
+  color: #fb695a; }
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: #1d8fbd;
+  color: #1d8fbd; }
+
+.btn-outline-primary {
+  background-color: #1d8fbd; }
+
+.btn-outline-primary:hover {
+  color: #1d8fbd; }
+
+/* _topbar */
 div#topbar {
   background-color: #1d8fbd; }
   div#topbar * {
@@ -8,6 +67,7 @@ div#topbar {
       display: block;
       text-align: center; } }
 
+/* _navbar. */
 header#header nav.navbar {
   background-color: #FFF;
   padding: 26px 0;
@@ -20,16 +80,19 @@ header#header nav.navbar {
     color: #00c3ff; }
   header#header nav.navbar div ul li.nav-item a.item-menu.active {
     color: #fb695a; }
-  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu {
-    color: #1d8fbd; }
-  header#header nav.navbar div ul li.nav-item div.dropdown-menu:active {
+  header#header nav.navbar div ul li.nav-item div.dropdown-menu {
     background-color: #FFF; }
-  header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu.active {
-    color: #FFF;
-    background-color: #fb695a; }
-  header#header nav.navbar div ul li.nav-item div.dropdown-menu:active {
-    background-color: #1d8fbd;
-    color: #FFF; }
+    header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu {
+      color: #1d8fbd;
+      background-color: #FFF; }
+    header#header nav.navbar div ul li.nav-item div.dropdown-menu:active {
+      background-color: #FFF; }
+    header#header nav.navbar div ul li.nav-item div.dropdown-menu a.item-menu.active {
+      color: #FFF;
+      background-color: #fb695a; }
+    header#header nav.navbar div ul li.nav-item div.dropdown-menu:active {
+      background-color: #FFF;
+      color: #FFF; }
 
 @media screen and (min-width: 992px) {
   img.logo-mini {
@@ -52,29 +115,28 @@ header#header nav.navbar {
       header#header nav.navbar img#logo {
         width: 220px;
         margin-left: 20px; }
-      header#header nav.navbar div.background-menu {
-        background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png");
-        background-position: auto;
-        background-size: cover;
-        z-index: 10; }
-        header#header nav.navbar div.background-menu ul li.nav-item a.item-menu {
+      header#header nav.navbar div#navbarText {
+        z-index: 10;
+        background-color: #1d8fbd;
+        font-weight: 600; }
+        header#header nav.navbar div#navbarText ul li.nav-item a.item-menu {
           color: #FFF; }
-        header#header nav.navbar div.background-menu ul li.nav-item:hover, header#header nav.navbar div.background-menu ul li.nav-item:active {
+        header#header nav.navbar div#navbarText ul li.nav-item:hover, header#header nav.navbar div#navbarText ul li.nav-item:active {
           color: #00c3ff; }
-        header#header nav.navbar div.background-menu ul li.nav-item a.item-menu.active {
-          color: #fb695a; }
-        header#header nav.navbar div.background-menu ul li.nav-item div.dropdown-menu {
+        header#header nav.navbar div#navbarText ul li.nav-item a.item-menu.active {
+          color: #fb695a;
+          background-color: #FFF; }
+        header#header nav.navbar div#navbarText ul li.nav-item div.dropdown-menu {
           border: none;
           border-radius: 0; }
-          header#header nav.navbar div.background-menu ul li.nav-item div.dropdown-menu a.item-menu {
+          header#header nav.navbar div#navbarText ul li.nav-item div.dropdown-menu a.item-menu {
             color: #1d8fbd; }
-          header#header nav.navbar div.background-menu ul li.nav-item div.dropdown-menu:active {
+          header#header nav.navbar div#navbarText ul li.nav-item div.dropdown-menu:active {
             background-color: #FFF; }
-          header#header nav.navbar div.background-menu ul li.nav-item div.dropdown-menu a.item-menu.active {
-            color: #FFF;
-            background-color: #fb695a; }
-          header#header nav.navbar div.background-menu ul li.nav-item div.dropdown-menu:active {
-            background-color: #1d8fbd;
+          header#header nav.navbar div#navbarText ul li.nav-item div.dropdown-menu a.item-menu.active {
+            color: #fb695a;
+            background-color: #FFF; }
+          header#header nav.navbar div#navbarText ul li.nav-item div.dropdown-menu:active {
             color: #FFF; }
       header#header nav.navbar .button-toggler-menu {
         border-radius: 50%;
@@ -86,19 +148,29 @@ header#header nav.navbar {
   .nav-container {
     margin: 0;
     max-width: 100%; } }
+/* _footer */
 footer#footer .top-footer {
   background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png);
-  padding-bottom: 22px; }
+  padding-bottom: 10px; }
   footer#footer .top-footer img {
     border-radius: 8px; }
   footer#footer .top-footer h6 {
-    font-size: 18px; }
+    font-size: 22px; }
   footer#footer .top-footer p, footer#footer .top-footer span {
     font-size: 14px; }
 footer#footer .bottom-footer {
   color: #1d8fbd; }
   footer#footer .bottom-footer a {
     color: #fb695a; }
+
+/* _produtos-home. */
+div#produtos i.fa, div#produtos i.fas, div#produtos i.fab {
+  font-size: 74px;
+  margin: 0 auto; }
+
+/* _portfolio. */
+h1, h2, h3, h4, h5, h6 {
+  color: #1d8fbd; }
 
 .m-40 {
   margin: 40px; }
@@ -109,6 +181,9 @@ footer#footer .bottom-footer {
 .m-10 {
   margin: 10px; }
 
+.m-6 {
+  margin: 10px; }
+
 .p-40 {
   padding: 40px; }
 
@@ -117,6 +192,9 @@ footer#footer .bottom-footer {
 
 .p-10 {
   padding: 10px; }
+
+.p-6 {
+  padding: 6px; }
 
 .title-page {
   background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png"); }
