@@ -1,0 +1,21 @@
+footer#footer {
+    .top-footer {
+        background-image: url(http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png);
+        padding-bottom: 22px;
+        img {
+            border-radius: 8px;
+        }
+        h6 {
+            font-size: 18px;
+        }
+        p, span {
+            font-size: 14px;
+        }
+    }
+    .bottom-footer {
+        color: $primary-color;
+        a {
+            color: $secondary-color;
+        }
+    }
+}

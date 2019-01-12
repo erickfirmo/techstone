@@ -1,0 +1,14 @@
+div#topbar {
+    background-color: $primary-color;
+    * {
+        font-size: 13px;
+        color: #FFF;
+    }
+    @media screen and (max-width: $break-medium)
+    {
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+}

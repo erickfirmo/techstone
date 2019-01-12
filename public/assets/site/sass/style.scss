@@ -1,9 +1,20 @@
 @import '_colors';
 @import '_breaks';
+@import '_topbar';
 @import '_navbar';
+@import '_footer';
 
-* {
-    font-family: 'Roboto', sans-serif;
+
+.m-40 {
+    margin: 40px;
+}
+
+.m-20 {
+    margin: 20px;
+}
+
+.m-10 {
+    margin: 10px;
 }
 
 .p-40 {
@@ -14,14 +25,15 @@
     padding: 20px;
 }
 
+.p-10 {
+    padding: 10px;
+}
 
 .title-page {
     background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png');
 }
 
-
 /* portifolio */
-
 .solid {
     * {
         color: #fff;
@@ -33,4 +45,3 @@
     position: relative;
     bottom: 0;
 }
-

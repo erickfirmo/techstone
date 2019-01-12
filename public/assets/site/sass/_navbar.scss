@@ -1,42 +1,31 @@
 header#header {
     nav.navbar {
         background-color: #FFF;
-        padding: 26px;
+        padding: 26px 0;
         z-index: 30;
         transition-duration: 0.6s;
-        a.navbar-brand {
-            margin-left: 30px;
-            width: 204px;
-            
-        }
         div {
             ul {
                 li.nav-item {
-                    a.nav-link.item-menu {
+                    a.item-menu {
                         color: $primary-color;
-                        padding-left: 56px;
+                        padding-left: 30px;
+                    } &:hover, &:active {
+                        color: rgb(0, 195, 255);
                     }
                     a.item-menu.active {
                         color: $secondary-color;
                     }
-                    a.item-menu:active {
-                        color: rgb(0, 195, 255);
-                    }
-                    a.item-menu:hover {
-                        color: rgb(0, 195, 255);
-                    }
                     div.dropdown-menu {
                         a.item-menu {
                             color: $primary-color;
-                        }
-                        a.item-menu:active {
+                        } &:active {
                             background-color: #FFF;
                         }
                         a.item-menu.active {
                             color: #FFF;
                             background-color: $secondary-color;
-                        }
-                        a.item-menu.active:active {
+                        } &:active {
                             background-color: $primary-color;
                             color: #FFF;
                         }
@@ -45,10 +34,6 @@ header#header {
             }
         }
     }
-
-    
-    
-    
 }
 
 @media screen and (min-width: $break-medium) {
@@ -56,7 +41,6 @@ header#header {
         transition-duration: 0.6s;
         transform: scale(0.8);
     }
-
     header#header nav.navbar-scroll {
         background: #ffffff;
         padding: 0;
@@ -65,52 +49,47 @@ header#header {
         position: fixed;
         top: 0;
         width: 100%;
-
-    }
-
-    
-
-    
+    }  
 }
 
 @media screen and (max-width: $break-medium) {
     header#header {
-        nav {
-            background-color: #FFF;
+        padding: 0;
+        nav.navbar {
             padding: 0;
-            a.navbar-brand {
-                padding: 40px 0;
-                img {
-                    width: 664px;
-                    margin-left: 30px;
-                }
+            img#logo {
+                width: 220px;
+                margin-left: 20px;
             }
             div.background-menu {
-                padding: 20px;
                 background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png');
                 background-position: auto;
                 background-size: cover;
                 z-index: 10;
                 ul {
                     li.nav-item {
-                        a.nav-link.item-menu {
+                        a.item-menu {
                             color: #FFF;
-                            font-size: 54px;
+                        } &:hover, &:active {
+                            color: rgb(0, 195, 255);
                         }
                         a.item-menu.active {
                             color: $secondary-color;
                         }
-                        a.item-menu:hover {
-                            color: rgb(0, 195, 255);
-                        }
                         div.dropdown-menu {
+                            border: none;
+                            border-radius: 0;
                             a.item-menu {
                                 color: $primary-color;
-                                font-size: 54px;
+                            } &:active {
+                                background-color: #FFF;
                             }
                             a.item-menu.active {
                                 color: #FFF;
                                 background-color: $secondary-color;
+                            } &:active {
+                                background-color: $primary-color;
+                                color: #FFF;
                             }
                         }
                     }
@@ -118,15 +97,17 @@ header#header {
             }
             .button-toggler-menu {
                 border-radius: 50%;
-                height: 56px;
                 border: none;
-                z-index: 10; 
-                margin-right: 22px;
-                height: 120px;
-                font-size: 74px; 
+                z-index: 10;
+                padding: 0;
+                margin-right: 20px;
             }
         }
-    } 
+    }
+    .nav-container {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
 
