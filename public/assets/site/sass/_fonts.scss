@@ -1,0 +1,24 @@
+p, a, a:active, a:visited, a:hover {
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+}
+
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+    border: none;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-danger {
+    color: $secondary-color;
+}
+
+.text-dark {
+    color: $default-grey !important;
+}
+
+

@@ -6,40 +6,42 @@ if(!defined('LAYOUT')) return 'site';
 
 <?php partial('site/_title-page'); ?>
 
-<div class="container p-40">
-    <h2 class="d-flex justify-content-center">ENTRE EM CONTATO E FAÇA SEU ORÇAMENTO</h2>
-
-    <p class="d-flex justify-content-center p-20">ENTRE EM CONTATO E FAÇA SEU ORÇAMENTO</p>
-
+<div class="container pt-2">
+    <h2 class="d-flex justify-content-center text-dark mt-3 mb-5">ENTRE EM CONTATO E FAÇA SEU ORÇAMENTO</h2>
     <div class="row">
-        <div class="col-sm-8 col-md-8 col-sx-8 col-lg-8">
-            <form class="contact-form" method="POST" action="#">
-                <input type="text" class="form-control" placeholder="Nome" name="nome">
-                <br>
-                <input type="text" class="form-control" placeholder="Email" name="email">
-                <br>
-                <input type="text" class="form-control" placeholder="Assunto" name="assunto">
-                <br>
-                <input type="text" class="form-control" placeholder="Empresa" name="empresa">
-                <br>
-                <h6>Escolha uma Opção para Entrarmos em Contato</h6>
-
-                <label for="#">Telefone</label>
-                <input type="radio" name="opcao-contato">
-                <label for="#">Email</label>
-                <input type="radio" name="opcao-contato">
-                <label for="#">Whatsapp</label>
-                <input type="radio" name="opcao-contato">
-                <input type="text" class="form-control" placeholder="Whatsapp" name="whatsapp">
-                <input type="text" class="form-control" placeholder="Telefone">
-                <input type="text" class="form-control" placeholder="Celular">
-                <input type="submit" value="ENVIAR">
-            </form>
+        <div class="col-12 col-sm-12 col-md-8 col-sx-8 col-lg-8 mb-5">
+            <?php partial('site/_form-contato'); ?>
         </div>
-        <div class="col-md-4">
-            <h5>Informações de Contato</h5>
-            <br>
-            <h5>Redes Sociais</h5>
+        <div id="info-sidebar" class="col-12 col-sm-12 col-md-4 col-sx-4 col-lg-4 mt-3">
+            <div class="mb-5">
+                <h4 class="text-primary mb-4">Informações de Contato</h4>
+                <span class="d-block text-left mb-3">
+                <p class="text-dark"><i class="fab fa-whatsapp mr-2"></i></i>+55 (11) 2445 – 5454</p>
+
+                </span>
+                <span class="d-block text-left mb-3">
+                    <p class="text-dark"><i class="fas fa-phone mr-2"></i></i>+55 (11) 2445 – 5454</p>
+
+                </span>
+                <span class="d-block text-left mb-3">
+                    
+                    <p class="text-dark"><i class="fas fa-envelope mr-2"></i>erickluques@gmail.com</p>
+                </span>
+            </div>
+            <h4 class="text-primary mb-4">Redes Sociais</h4>
+            <span>
+                <a href="#">
+                    <i class="fab fa-facebook mb-4 text-dark"></i>
+                </a>
+                &nbsp;
+                <a href="#">
+                    <i class="fab fa-twitter-square mb-4 text-dark"></i>
+                </a>                        
+                &nbsp;
+                <a href="#">
+                    <i class="fab fa-instagram mb-4 text-dark"></i>
+                </a>
+            </span>
         </div>
     </div>
 </div>

@@ -1,6 +1,5 @@
 @import '_breaks';
 @import '_colors';
-
 /* _brackgrounds */
 @import '_backgrounds';
 /* _buttons */
@@ -15,66 +14,9 @@
 @import '_produtos-home';
 /* _portfolio. */
 @import '_portfolio';
-
-
-
-h1, h2, h3, h4, h5, h6 {
-    color: $primary-color;
-}
-
-p, a, a:active, a:visited, a:hover {
-    color: $default-grey;
-    text-decoration: none;
-    border: none;
-}
-
-.m-40 {
-    margin: 40px;
-}
-
-.m-20 {
-    margin: 20px;
-}
-
-.m-10 {
-    margin: 10px;
-}
-
-
-.m-6 {
-    margin: 10px;
-}
-
-
-.p-40 {
-    padding: 40px;
-}
-
-.p-20 {
-    padding: 20px;
-}
-
-.p-10 {
-    padding: 10px;
-}
-
-.p-6 {
-    padding: 6px;
-}
-
-.title-page {
-    background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png');
-}
-
-/* portifolio */
-.solid {
-    * {
-        color: #fff;
-        font-weight: 600;
-    }
-}
-
-.footer {
-    position: relative;
-    bottom: 0;
-}
+/* _fonts. */
+@import '_fonts';
+/* _info-sidebar */
+@import '_info-sidebar';
+/* _globals. */
+@import '_globals';

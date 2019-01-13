@@ -19,15 +19,14 @@ header#header {
                     div.dropdown-menu {
                         background-color: #FFF;
                         a.item-menu {
-                            color: $primary-color;
-                            
                             background-color: #FFF;
+                            color: $primary-color;
                         } &:active {
                             background-color: #FFF;
                         }
                         a.item-menu.active {
-                            color: #FFF;
                             background-color: $secondary-color;
+                            color: #FFF;
                         } &:active {
                             background-color: #FFF;
                             color: #FFF;
@@ -45,7 +44,7 @@ header#header {
         transform: scale(0.8);
     }
     header#header nav.navbar-scroll {
-        background: #ffffff;
+        background-color: #ffffff;
         padding: 0;
         box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
         transition-duration: 0.6s;

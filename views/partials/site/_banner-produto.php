@@ -6,7 +6,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-        <p class="text-justify"><?php echo $text; ?></p>
+        <p class="text-justify text-dark"><?php echo $text; ?></p>
         </div>
     </div>
 </div>
