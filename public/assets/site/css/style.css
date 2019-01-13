@@ -169,8 +169,18 @@ div#produtos i.fa, div#produtos i.fas, div#produtos i.fab {
   margin: 0 auto; }
 
 /* _portfolio. */
+#portfolio .card {
+  border: 2px solid #EEE;
+  padding: 10px;
+  min-height: 300px; }
+
 h1, h2, h3, h4, h5, h6 {
   color: #1d8fbd; }
+
+p, a, a:active, a:visited, a:hover {
+  color: #616161;
+  text-decoration: none;
+  border: none; }
 
 .m-40 {
   margin: 40px; }

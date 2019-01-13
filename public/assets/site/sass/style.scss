@@ -18,10 +18,14 @@
 
 
 
-
-
 h1, h2, h3, h4, h5, h6 {
     color: $primary-color;
+}
+
+p, a, a:active, a:visited, a:hover {
+    color: $default-grey;
+    text-decoration: none;
+    border: none;
 }
 
 .m-40 {
