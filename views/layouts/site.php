@@ -23,6 +23,8 @@
 <script src="<?php url('/node_modules/bootstrap/dist/js/bootstrap.js'); ?>"></script>
 
 <script src="<?php url('/assets/site/js/_navbar.js'); ?>"></script>
+<script src="<?php url('/assets/site/js/_scroll-efect-show.js'); ?>"></script>
+
 
 </body>
 </html>

@@ -3,6 +3,7 @@
 namespace App\Controllers\Site;
 
 use App\Controllers\Controller;
+use App\Mensagem;
 
 class SiteController extends Controller 
 {
@@ -46,4 +47,29 @@ class SiteController extends Controller
     {
         return $this->view('/site/contato');
     }
+
+    public function enviar_mensagem()
+    {
+        $this->request()->validate([
+            'nome' => 'required',
+            'email' => 'required',
+            'telefone' => 'required',
+            'opcao_contato' => 'required',
+        ]);
+
+        $mensagem = new Mensagem;
+        $mensagem->nome = $this->request()->input('nome');
+        $mensagem->email = $this->request()->input('email');
+        $mensagem->assunto = $this->request()->input('assunto');
+        $mensagem->empresa = $this->request()->input('empresa');
+        $mensagem->whatsapp = $this->request()->input('whatsapp');
+        $mensagem->telefone = $this->request()->input('telefone');
+        $mensagem->opcao_contato = $this->request()->input('opcao_contato');  
+        $mensagem->conteudo = $this->request()->input('conteudo');        
+        $mensagem->save();
+        $this->alert('success', 'Mensagem enviada com sucesso !');
+
+        return $this->route()->redirect('/contato');
+    }
+
 }

@@ -6,6 +6,8 @@ if(!defined('LAYOUT')) return 'site';
 
 <?php partial('site/_title-page'); ?>
 
+<?php alert(); ?>
+
 <div class="container pt-2">
     <h2 class="d-flex justify-content-center text-dark mt-3 mb-5">ENTRE EM CONTATO E FAÇA SEU ORÇAMENTO</h2>
     <div class="row">

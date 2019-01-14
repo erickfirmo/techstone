@@ -172,10 +172,13 @@ div#produtos .btn {
   font-size: 14px; }
 
 /* _portfolio. */
-#portfolio div .card {
-  border: 0px solid #EEE;
-  padding: 10px;
-  min-height: 300px; }
+#portfolio {
+  transition-duration: 2s;
+  opacity: 0; }
+  #portfolio div .card {
+    border: 0px solid #EEE;
+    padding: 10px;
+    min-height: 300px; }
 
 /* _fonts. */
 p, a, a:active, a:visited, a:hover {
@@ -199,51 +202,5 @@ a, a:active, a:visited, a:hover {
 /* _info-sidebar */
 #info-sidebar i {
   font-size: 22px; }
-
-/* _globals. */
-/*
-
-
-
-.m-40 {
-    margin: 40px;
-}
-
-.m-20 {
-    margin: 20px;
-}
-
-.m-10 {
-    margin: 10px;
-}
-
-.m-6 {
-    margin: 10px;
-}
-
-.p-40 {
-    padding: 40px;
-}
-
-.p-20 {
-    padding: 20px;
-}
-
-.p-10 {
-    padding: 10px;
-}
-
-.p-6 {
-    padding: 6px;
-}  
-
-
-*/
-.title-page {
-  background-image: url("http://backgroundcheckall.com/wp-content/uploads/2017/12/website-banner-background-png.png"); }
-
-.footer {
-  position: relative;
-  bottom: 0; }
 
 /*# sourceMappingURL=style.css.map */

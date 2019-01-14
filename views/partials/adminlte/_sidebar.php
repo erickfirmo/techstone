@@ -33,7 +33,7 @@
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header">NAVEGAÇÃO</li>
     <!-- Optionally, you can add icons to the links -->
-    <li class="<?php classActiveUrl('/'); ?>"><a href="<?php url('/'); ?>"><i class="fa fa-link"></i> <span>Home</span></a></li>
+    <li class="<?php classActiveUrl('/'); ?>"><a href="<?php url('/admin/home'); ?>"><i class="fa fa-link"></i> <span>Home</span></a></li>
     <li class="treeview">
       <a href="#"><i class="fa fa-link"></i> <span>Posts</span>
         <span class="pull-right-container">
@@ -41,10 +41,12 @@
           </span>
       </a>
       <ul class="treeview-menu">
-        <li class="<?php classActiveUrl('/posts'); ?>"><a href="<?php url('/posts'); ?>">Todos os Posts</a></li>
-        <li class="<?php classActiveUrl('/posts/create'); ?>"><a href="<?php url('/posts/create'); ?>">Adicionar Post</a></li>
+        <li class="<?php classActiveUrl('/admin/posts'); ?>"><a href="<?php url('/posts'); ?>">Todos os Posts</a></li>
+        <li class="<?php classActiveUrl('/admin/posts/create'); ?>"><a href="<?php url('/posts/create'); ?>">Adicionar Post</a></li>
       </ul>
     </li>
+    <li class="<?php classActiveUrl('/'); ?>"><a href="<?php url('/admin/mensagens'); ?>"><i class="fa fa-envelope"></i> <span>Mensagens</span></a></li>
+
   </ul>
   <!-- /.sidebar-menu -->
 </section>

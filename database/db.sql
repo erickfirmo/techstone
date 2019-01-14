@@ -32,6 +32,19 @@ CREATE TABLE `post`(
     PRIMARY KEY(`id`)
 );
 
+CREATE TABLE `mensagens`(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `nome` varchar(20) NOT NULL,
+    `email` varchar(100) NOT NULL,
+    `assunto` varchar(100) NOT NULL,
+    `empresa` varchar(40),
+    `whatsapp` varchar(20),
+    `telefone` varchar(20) NOT NULL,
+    `opcao_contato` enum('telefone', 'email', 'whatsapp') NOT NULL,
+    `conteudo` varchar(400),
+    PRIMARY KEY(`id`)
+);
+
 
 
 

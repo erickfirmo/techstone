@@ -63,7 +63,7 @@ class AdminController extends Controller
         } else {
             $this->alert('danger', 'Este email não corresponde a nenhuma conta.');
         }
-        return $this->route()->redirect('/');
+        return $this->route()->redirect('/admin/home');
     }
 
     public function logout()

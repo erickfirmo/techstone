@@ -44,10 +44,27 @@ return [
         'method' => 'GET'
     ],
 
+    '/enviar_mensagem/' => [
+        'action' => 'Site\SiteController@enviar_mensagem',
+        'method' => 'POST'
+    ],
+
     /* rotas admin */
 
     '/admin/home/' => [
         'action' => 'Admin\HomeController@index',
+        'method' => 'GET'
+    ],
+
+    /* rotas das mensagens */
+
+    '/admin/mensagens/' => [
+        'action' => 'Admin\MensagemController@index',
+        'method' => 'GET'
+    ],
+
+    '/admin/mensagens/$id/' => [
+        'action' => 'Admin\MensagemController@show',
         'method' => 'GET'
     ],
 
