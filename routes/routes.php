@@ -59,12 +59,12 @@ return [
     /* rotas das mensagens */
 
     '/admin/mensagens/' => [
-        'action' => 'Admin\MensagemController@index',
+        'action' => 'Admin\MensagemController@all',
         'method' => 'GET'
     ],
 
     '/admin/mensagens/$id/' => [
-        'action' => 'Admin\MensagemController@show',
+        'action' => 'Admin\MensagemController@single',
         'method' => 'GET'
     ],
 

@@ -42,6 +42,7 @@ CREATE TABLE `mensagens`(
     `telefone` varchar(20) NOT NULL,
     `opcao_contato` enum('telefone', 'email', 'whatsapp') NOT NULL,
     `conteudo` varchar(400),
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(`id`)
 );
 

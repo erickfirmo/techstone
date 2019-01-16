@@ -4,7 +4,7 @@ section('title', 'TechStone | Desenvolvimento Web');
 section('page-title', 'TechStone');
 section('description', 'Desenvolvimento Web');
 
-if(!defined('LAYOUT')) return 'adminlte';
+if(!defined('LAYOUT')) return 'admin';
 
 ?>
 

@@ -12,19 +12,21 @@ class MensagemController extends Controller
         $this->middleware('admin');
     }
 
-    public function index()
+    public function all()
     {
         $mensagens = (new Mensagem())->all();
-        return $this->view('/admin/mensagens/index', [
+        return $this->view('/admin/mensagens/all', [
             'mensagens' => $mensagens
         ]);
     }
 
-    public function show($id)
+    public function single($id)
     {
-        $mensagens = (new Mensagem())->find($id);
-        return $this->view('/admin/mensagens/show', [
-            'mensagem' => $mensagem
+        $mensagens = (new Mensagem())->all();
+        $mensagem = (new Mensagem())->find($id);
+        return $this->view('/admin/mensagens/single', [
+            'mensagem' => $mensagem,
+            'mensagens' => $mensagens
         ]);
     }
 }

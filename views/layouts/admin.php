@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="<?php url('/node_modules/admin-lte/dist/css/AdminLTE.min.css'); ?>">
   <!-- AdminLTE Skins. -->
   <link rel="stylesheet" href="<?php url('/node_modules/admin-lte/dist/css/skins/_all-skins.min.css'); ?>">
+  <!-- AdminLTE Skins. -->
+  <link rel="stylesheet" href="<?php url('/node_modules/admin-lte/plugins/iCheck/flat/blue.css'); ?>">
   <!-- Google Font -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -46,8 +48,8 @@ desired effect
 
     
     <?php 
-        partial('adminlte/_header'); 
-        partial('adminlte/_sidebar');
+        partial('admin/_header'); 
+        partial('admin/_sidebar');
     ?>
 
   <!-- Content Wrapper. Contains page content -->
@@ -75,9 +77,9 @@ desired effect
   </div>
   <!-- /.content-wrapper -->
 
-  <?php partial('adminlte/_footer'); ?>
+  <?php partial('admin/_footer'); ?>
 
-  <?php partial('adminlte/_control-sidebar'); ?>
+  <?php partial('admin/_control-sidebar'); ?>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
@@ -91,13 +93,6 @@ desired effect
 <!-- Bootstrap 3.3.7 -->
 <script src="<?php url('/node_modules/admin-lte/bower_components/bootstrap/dist/js/bootstrap.min.js'); ?>"></script>
 <!-- AdminLTE App -->
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. 
-     <script src="url('/node_modules/admin-lte/dist/js/adminlte.min.js');"></script>
-    
-    -->
 
 
 <!-- Select2 -->
@@ -120,12 +115,14 @@ desired effect
 <script src="<?php url('/node_modules/admin-lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js'); ?>"></script>
 <!-- SlimScroll -->
 <script src="<?php url('/node_modules/admin-lte/bower_components/jquery-slimscroll/jquery.slimscroll.min.js'); ?>"></script>
-<!-- iCheck 1.0.1 -->
-<script src="<?php url('/node_modules/admin-lte/plugins/iCheck/icheck.min.js'); ?>"></script>
 <!-- FastClick -->
 <script src="<?php url('/node_modules/admin-lte/bower_components/fastclick/lib/fastclick.js'); ?>"></script>
 <!-- AdminLTE App -->
 <script src="<?php url('/node_modules/admin-lte/dist/js/adminlte.min.js'); ?>"></script>
+<!-- iCheck 1.0.1 -->
+<script src="<?php url('/node_modules/admin-lte/plugins/iCheck/icheck.min.js'); ?>"></script>
+
+
 <!-- Page script -->
 
 <script>
@@ -226,8 +223,14 @@ $("#destroy").click(function(event){
   $("#destroy-form").submit();
 });
 
-
-
 </script>
+
+
+<?php
+
+all_page_assets();
+
+?>
+
 </body>
 </html>

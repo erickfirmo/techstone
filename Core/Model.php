@@ -13,6 +13,8 @@ class Model
     public $pivot_entity = NULL;
     public $pivot_parent_id = NULL;
     public $pivot_table = NULL;
+    public $created_at = NULL;
+    public $update_at = NULL;
 
     public function getPDOConnection()
     {
