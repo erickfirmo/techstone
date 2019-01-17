@@ -17,6 +17,7 @@ class Mensagem extends Model
     public $telefone;
     public $opcao_contato;
     public $conteudo;
+    public $is_deleted;
 
     public $fields = [
         'nome',
@@ -29,7 +30,6 @@ class Mensagem extends Model
         'conteudo'
     ];
 
-    
 }
 
 

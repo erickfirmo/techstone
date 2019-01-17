@@ -58,8 +58,8 @@ class Model
         return $this->createObject($register, static::class);
     }
 
-    public function update(array $updates)
-    {    
+    public function writeFields()
+    {
         $fields = NULL;
         foreach ($this->fields as $key => $field)
         {
@@ -70,6 +70,12 @@ class Model
                 $fields = $fields.' '.$field.'= :'.$field;
             }
         }
+        return $fields;
+    }
+
+    public function update(array $updates)
+    {    
+        $fields = $this->writeFields();
         $db = $this->getPDOConnection();
         $sql = 'UPDATE '.$this->table.' SET '.$fields.' WHERE id="'.$this->id.'"';
         $stmt = $db->prepare($sql);
@@ -80,10 +86,9 @@ class Model
         $stmt->execute();
     }
 
-
-    public function all()
+    public function all($is_deleted=0)
     {
-        $sql = 'SELECT * FROM '.$this->table;
+        $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted);
         $db = $this->getPDOConnection();
         $stmt = $db->prepare($sql);
         $stmt->execute();
@@ -91,8 +96,7 @@ class Model
         if($this->paginate)
         {
             $this->setPagination($registers);
-            $sql = 'SELECT * FROM '.$this->table.' LIMIT '.$this->getLimit();
-
+            $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted).' LIMIT '.$this->getLimit();
             if($_SESSION['PAGE'] > 1)
             {
                 $sql = $sql.' OFFSET '.($_SESSION['PAGE'] - 1)*$this->getLimit();
@@ -105,6 +109,16 @@ class Model
             $_SESSION['PAGINATE'] = false;
         }
         return $this->objectsConstruct($registers, $this->getNameOfClass());
+    }
+
+    public function all_deleted($is_deleted)
+    {
+        return $this->all($is_deleted);
+    }
+
+    public function verifySoftDelete($level)
+    {
+        return property_exists($this->getNameOfClass(), 'is_deleted') ? ' WHERE is_deleted="'.$level.'"' : '';
     }
 
     public function where($condition)
@@ -137,8 +151,26 @@ class Model
     public function delete($id)
     {
         $db = $this->getPDOConnection();
-        $sql = 'DELETE FROM '.$this->table.' WHERE id='.$id;
+        $sql = 'DELETE FROM '.$this->table.' WHERE id="'.$id.'"';
         $stmt = $db->prepare($sql);
+        $stmt->execute();
+    }
+
+    public function softDelete()
+    {
+        $db = $this->getPDOConnection();
+        $sql = 'UPDATE '.$this->table.' SET is_deleted=:is_deleted WHERE id="'.$this->id.'"';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':is_deleted', '1');
+        $stmt->execute();
+    }
+
+    public function restore()
+    {
+        $db = $this->getPDOConnection();
+        $sql = 'UPDATE '.$this->table.' SET is_deleted=:is_deleted WHERE id="'.$this->id.'"';
+        $stmt = $db->prepare($sql);
+        $stmt->bindValue(':is_deleted', '0');
         $stmt->execute();
     }
 

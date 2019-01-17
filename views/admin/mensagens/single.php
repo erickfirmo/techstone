@@ -12,10 +12,10 @@ if(!defined('LAYOUT')) return 'admin';
     <div class="col-md-3">
 
         <?php partial('admin/mensagens/_pastas-sidebar', [
-            'count_entrada' => count($mensagens),
-            'count_favoritos'  => count($mensagens),
-            'count_arquivadas'  => count($mensagens),
-            'count_lixeira'  => count($mensagens),
+            'mensagens' => $mensagens,
+            'mensagens_favoritas'  => $mensagens,
+            'mensagens_arquivadas'  => $mensagens,
+            'mensagens_na_lixeira'  => $mensagens_na_lixeira,
         ]); ?>
     </div>
     <!-- /.col -->
@@ -91,8 +91,12 @@ if(!defined('LAYOUT')) return 'admin';
                     <!--<button type="button" class="btn btn-default"><i class="fa fa-reply"></i> Reply</button>-->
                     <!--<button type="button" class="btn btn-default"><i class="fa fa-share"></i> Forward</button>-->
                 </div>
-                <button type="button" class="btn btn-default"><i class="fa fa-file-text-o"></i> Arquivar</button>
-                <button type="button" class="btn btn-default"><i class="fa fa-trash-o"></i> Excluir</button>
+                <form action="#">
+                    <button type="button" class="btn btn-default"><i class="fa fa-file-text-o"></i> Arquivar</button>
+                </form>
+                <form action="#">
+                    <button type="button" class="btn btn-default"><i class="fa fa-trash-o"></i> Excluir</button>
+                </form>
                 <!--<button type="button" class="btn btn-default"><i class="fa fa-print"></i> Print</button>-->
             </div>
         </div>

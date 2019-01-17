@@ -12,7 +12,7 @@
             <li class="<?php classActiveUrl('/admin/mensagens'); ?>">
                 <a href="<?php url('/admin/mensagens'); ?>">
                     <i class="fa fa-inbox"></i> Caixa de Entrada
-                    <span class="label label-primary pull-right"><?php echo $count_entrada; ?></span>
+                    <span class="label label-primary pull-right"><?php echo count($mensagens); ?></span>
                 </a>
             </li>
             <li class="<?php classActiveUrl('/admin/mensagens/favoritas'); ?>">
@@ -30,7 +30,7 @@
             <li class="<?php classActiveUrl('/admin/mensagens/lixeira'); ?>">
                 <a href="<?php url('/admin/mensagens/lixeira'); ?>">
                     <i class="fa fa-trash-o"></i> Lixeira 
-                    <span class="label label-primary pull-right">0</span>
+                    <span class="label label-primary pull-right"><?php echo count($mensagens_na_lixeira); ?></span>
                 </a>
             </li>
         </ul>

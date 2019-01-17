@@ -83,6 +83,21 @@ return [
         'method' => 'GET'
     ],
 
+    '/admin/mensagens/add-lixeira/$id/' => [
+        'action' => 'Admin\MensagemController@add_lixeira',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/restaurar/$id/' => [
+        'action' => 'Admin\MensagemController@restaurar',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/$id/destroy/' => [
+        'action' => 'Admin\MensagemController@destroy',
+        'method' => 'POST'
+    ],
+    
 
     /* rotas dos posts */
 

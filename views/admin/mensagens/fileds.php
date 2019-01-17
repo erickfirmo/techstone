@@ -11,11 +11,11 @@ if(!defined('LAYOUT')) return 'admin';
 
 <div class="row">
     <div class="col-md-3">
-        <?php partial('admin/mensagens/_pastas-sidebar', [
-            'count_entrada' => count($mensagens),
-            'count_favoritos'  => count($mensagens),
-            'count_arquivadas'  => count($mensagens),
-            'count_lixeira'  => count($mensagens),
+    <?php partial('admin/mensagens/_pastas-sidebar', [
+            'mensagens' => $mensagens,
+            'mensagens_favoritas'  => $mensagens,
+            'mensagens_arquivadas'  => $mensagens,
+            'mensagens_na_lixeira'  => $mensagens_na_lixeira,
         ]); ?>
     </div>
     <div class="col-md-9">
