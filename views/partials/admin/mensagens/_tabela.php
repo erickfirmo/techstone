@@ -73,4 +73,4 @@
 </div>
 <!-- /. box -->
 
-<?php page_asset('/admin/js/mensagens/_mailbox.js'); ?>
+<?php page_asset('/admin/js/mensagens/_mailbox'); ?>

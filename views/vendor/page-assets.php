@@ -3,8 +3,11 @@
 function page_asset($script) {
     if(!isset($_SESSION['page_scripts']))
         $_SESSION['page_scripts'] = [];
-    
-    array_push($_SESSION['page_scripts'], $script);
+
+    if(!in_array($script, $_SESSION['page_scripts']))
+    {
+        array_push($_SESSION['page_scripts'], $script);
+    }
 }
 
 function all_page_assets() {
@@ -16,5 +19,7 @@ function all_page_assets() {
             echo '<script src="'.$config['APP_URL'].'/assets'.$script.'.js"></script>';
         }
     }
+    
     $_SESSION['page_scripts'] = NULL;
+
 }

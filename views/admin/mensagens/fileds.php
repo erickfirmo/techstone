@@ -25,5 +25,3 @@ if(!defined('LAYOUT')) return 'admin';
         ]); ?>
     </div>
 </div>
-
-<?php page_asset('/admin/js/mensagens/_mailbox'); ?>

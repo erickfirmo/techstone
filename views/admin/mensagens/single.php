@@ -104,7 +104,3 @@ if(!defined('LAYOUT')) return 'admin';
     <!-- /.col -->
 </div>
 <!-- /.row -->
-
-<?php 
-page_asset('/admin/js/mensagens/_mailbox');
-?>
