@@ -1,6 +1,6 @@
 <div class="box box-primary">
     <div class="box-header with-border">
-    <h3 class="box-title">Caixa de Entrada</h3>
+    <h3 class="box-title"><?php echo $title; ?></h3>
 
     <div class="box-tools pull-right">
         <div class="has-feedback">
@@ -26,8 +26,7 @@
             <div class="pull-right">
             1-50/200
             <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                <?php pagination_links('_basic'); ?>
             </div>
             <!-- /.btn-group -->
             </div>
@@ -64,8 +63,7 @@
             <div class="pull-right">
             1-50/200
             <div class="btn-group">
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-left"></i></button>
-                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-chevron-right"></i></button>
+                <?php pagination_links('_basic'); ?>
             </div>
             <!-- /.btn-group -->
             </div>
@@ -74,3 +72,5 @@
     </div>
 </div>
 <!-- /. box -->
+
+<?php page_asset('/admin/js/mensagens/_mailbox.js'); ?>

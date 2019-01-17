@@ -1,7 +1,7 @@
 <?php 
 section('title', 'TechStone | Mensagens');
 section('page-title', 'Mensagens');
-section('description', 'Todas as mensagens');
+section('description', 'Lixeira');
 if(!defined('LAYOUT')) return 'admin';
 ?>
 
@@ -20,10 +20,11 @@ if(!defined('LAYOUT')) return 'admin';
     </div>
     <div class="col-md-9">
         <?php partial('admin/mensagens/_tabela', [
-            'title' => 'Caixa de Entrada',
+            'title' => 'Lixeira',
             'mensagens' => $mensagens,
         ]); ?>
     </div>
 </div>
 
 <?php page_asset('/admin/js/mensagens/_mailbox'); ?>
+

@@ -68,6 +68,21 @@ return [
         'method' => 'GET'
     ],
 
+    '/admin/mensagens/favoritas/' => [
+        'action' => 'Admin\MensagemController@favoritas',
+        'method' => 'GET'
+    ],
+
+    '/admin/mensagens/arquivadas/' => [
+        'action' => 'Admin\MensagemController@arquivadas',
+        'method' => 'GET'
+    ],
+
+    '/admin/mensagens/lixeira/' => [
+        'action' => 'Admin\MensagemController@lixeira',
+        'method' => 'GET'
+    ],
+
 
     /* rotas dos posts */
 

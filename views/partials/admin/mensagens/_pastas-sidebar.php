@@ -15,20 +15,20 @@
                     <span class="label label-primary pull-right"><?php echo $count_entrada; ?></span>
                 </a>
             </li>
-            <li class="<?php classActiveUrl('/admin/'); ?>">
-                <a href="<?php url('/admin/mensagens'); ?>">
-                    <i class="fa fa-star text-yellow"></i> Favoritos 
+            <li class="<?php classActiveUrl('/admin/mensagens/favoritas'); ?>">
+                <a href="<?php url('/admin/mensagens/favoritas'); ?>">
+                    <i class="fa fa-star text-yellow"></i> Favoritas 
                     <span class="label label-primary pull-right">0</span>
                 </a>
             </li>
-            <li class="<?php classActiveUrl('/admin/'); ?>">
-                <a href="<?php url('/admin/mensagens'); ?>">
+            <li class="<?php classActiveUrl('/admin/mensagens/arquivadas'); ?>">
+                <a href="<?php url('/admin/mensagens/arquivadas'); ?>">
                     <i class="fa fa-file-text-o"></i> Arquivadas
                     <span class="label label-primary pull-right">0</span>
                 </a>
             </li>
-            <li class="<?php classActiveUrl('/admin/'); ?>">
-                <a href="<?php url('/admin/mensagens'); ?>">
+            <li class="<?php classActiveUrl('/admin/mensagens/lixeira'); ?>">
+                <a href="<?php url('/admin/mensagens/lixeira'); ?>">
                     <i class="fa fa-trash-o"></i> Lixeira 
                     <span class="label label-primary pull-right">0</span>
                 </a>
