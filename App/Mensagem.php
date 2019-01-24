@@ -15,6 +15,7 @@ class Mensagem extends Model
     public $empresa;
     public $whatsapp;
     public $telefone;
+    public $favorita;
     public $opcao_contato;
     public $conteudo;
     public $is_deleted;
@@ -26,6 +27,7 @@ class Mensagem extends Model
         'empresa',
         'whatsapp',
         'telefone',
+        'favorita',
         'opcao_contato',
         'conteudo'
     ];

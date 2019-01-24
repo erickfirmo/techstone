@@ -173,8 +173,7 @@ div#produtos .btn {
 
 /* _portfolio. */
 #portfolio {
-  transition-duration: 2s;
-  opacity: 0; }
+  transition-duration: 2s; }
   #portfolio div .card {
     border: 0px solid #EEE;
     padding: 10px;

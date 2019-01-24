@@ -16,21 +16,25 @@ class MensagemController extends Controller
     {
         $mensagens = (new Mensagem())->all();
         $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
-
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
         return $this->view('/admin/mensagens/all', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
+            'mensagens_favoritas' => $mensagens_favoritas,
         ]);
     }
 
     public function single($id)
     {
-        $mensagens = (new Mensagem())->all();
         $mensagem = (new Mensagem())->find($id);
+        $mensagens = (new Mensagem())->all();
+        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
         return $this->view('/admin/mensagens/single', [
             'mensagem' => $mensagem,
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
+            'mensagens_favoritas' => $mensagens_favoritas,
         ]);
     }
 
@@ -38,19 +42,11 @@ class MensagemController extends Controller
     {
         $mensagens = (new Mensagem())->all();
         $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
         return $this->view('/admin/mensagens/favorites', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
-        ]);
-    }
-
-    public function arquivadas()
-    {
-        $mensagens = (new Mensagem())->all();
-        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
-        return $this->view('/admin/mensagens/fileds', [
-            'mensagens' => $mensagens,
-            'mensagens_na_lixeira' => $mensagens_na_lixeira,
+            'mensagens_favoritas' => $mensagens_favoritas,
         ]);
     }
 
@@ -58,20 +54,45 @@ class MensagemController extends Controller
     {
         $mensagens = (new Mensagem())->all();
         $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
-
         return $this->view('/admin/mensagens/lixeira', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
         ]);
     }
 
-    public function add_lixeira($id)
+    public function toggle_favorita()
     {
-        (new Mensagem())->find($id)->softDelete();    
-        $this->alert('success', 'Mensagem adicionada a lixeira com successo !');
-        return $this->route()->redirect('/admin/mensagens/show');
+        $id = $_POST['mensagem_id'];
 
-      
+        $mensagem = (new Mensagem())->find($id);
+        var_dump($mensagem);
+        if($mensagem->favorita == 'n')
+        {
+            $mensagem->update([
+                'favorita' => 's'
+            ]);
+        } elseif($mensagem->favorita == 's') {
+            $mensagem->update([
+                'favorita' => 'n'
+            ]);
+        }
+        return $this->route()->back();
+    }
+
+    public function add_lixeira_multi()
+    {
+        $mensagens_id = explode('|', $_POST['mensagens_id']);
+        foreach($mensagens_id as $id)
+        {
+            (new Mensagem())->find($id)->softDelete();
+        }
+    }
+
+    public function add_lixeira_single($id)
+    {
+        $variavel = (new Mensagem())->find($id)->softDelete();
+        $this->alert('success', 'Mensagem adicionada a lixeira !');
+        return $this->route()->redirect('/admin/mensagens'); 
     }
 
     public function restaurar($id)
@@ -79,13 +100,21 @@ class MensagemController extends Controller
         (new Mensagem())->find($id)->restore();  
         $this->alert('success', 'Mensagem restaurada a Caixa de Entrada com successo !');
         return $this->route()->redirect('/admin/mensagens/show');
-
     }
 
-    public function destroy($id)
+    public function destroy_multi()
     {
+        $mensagens_id = explode('|', $_POST['mensagens_id']);
+        foreach($mensagens_id as $id)
+        {
+            (new Mensagem())->delete($id);
+        }
+    }
+
+    public function destroy_single()
+    {
+        $id = $this->request()->input('mensagem_id');
         (new Mensagem())->delete($id);
-        $this->alert('success', 'Mensagem removida permanentemente !');
-        return $this->route()->redirect('/admin/mensagens'); 
+        return $this->route()->redirect('/admin/mensagens/');
     }
 }

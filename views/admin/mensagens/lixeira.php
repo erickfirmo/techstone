@@ -22,6 +22,9 @@ if(!defined('LAYOUT')) return 'admin';
         <?php partial('admin/mensagens/_tabela', [
             'title' => 'Lixeira',
             'mensagens' => $mensagens_na_lixeira,
+            'destroy_action' => 'destroy-mensagem'
         ]); ?>
     </div>
 </div>
+
+<?php page_asset('/admin/js/mensagens/_destroy-multi'); ?>

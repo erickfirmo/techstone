@@ -73,27 +73,47 @@ return [
         'method' => 'GET'
     ],
 
-    '/admin/mensagens/arquivadas/' => [
-        'action' => 'Admin\MensagemController@arquivadas',
-        'method' => 'GET'
-    ],
-
     '/admin/mensagens/lixeira/' => [
         'action' => 'Admin\MensagemController@lixeira',
         'method' => 'GET'
     ],
 
-    '/admin/mensagens/add-lixeira/$id/' => [
-        'action' => 'Admin\MensagemController@add_lixeira',
+    '/admin/mensagens/add-lixeira-single/' => [
+        'action' => 'Admin\MensagemController@add_lixeira_single',
         'method' => 'POST'
     ],
 
-    '/admin/mensagens/restaurar/$id/' => [
+    '/admin/mensagens/destroy-single/' => [
+        'action' => 'Admin\MensagemController@destroy_single',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/add-lixeira-multi/' => [
+        'action' => 'Admin\MensagemController@add_lixeira_multi',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/add-favorita/' => [
+        'action' => 'Admin\MensagemController@toggle_favorita',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/destroy_multi/' => [
+        'action' => 'Admin\MensagemController@destroy_multi',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/restaurar/' => [
         'action' => 'Admin\MensagemController@restaurar',
         'method' => 'POST'
     ],
 
-    '/admin/mensagens/$id/destroy/' => [
+    '/admin/mensagens/destroy-multi/' => [
+        'action' => 'Admin\MensagemController@destroy_multi',
+        'method' => 'POST'
+    ],
+
+    '/admin/mensagens/destroy/' => [
         'action' => 'Admin\MensagemController@destroy',
         'method' => 'POST'
     ],

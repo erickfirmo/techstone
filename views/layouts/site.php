@@ -25,6 +25,12 @@
 <script src="<?php url('/assets/site/js/_navbar.js'); ?>"></script>
 <script src="<?php url('/assets/site/js/_scroll-efect-show.js'); ?>"></script>
 
+<?php
+
+all_page_assets();
+
+?>
+
 
 </body>
 </html>

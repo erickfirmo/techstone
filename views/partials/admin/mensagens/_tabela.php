@@ -17,12 +17,10 @@
             <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
             </button>
             <div class="btn-group">
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+            <button type="button" class="btn btn-default btn-sm <?php echo $destroy_action; ?>"><i class="fa fa-trash-o"></i></button>
             </div>
             <!-- /.btn-group -->
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn btn-default btn-sm" onclick="window.location.reload();"><i class="fa fa-refresh"></i></button>
             <div class="pull-right">
             1-50/200
             <div class="btn-group">
@@ -33,12 +31,15 @@
             <!-- /.pull-right -->
         </div>
         <div class="table-responsive mailbox-messages">
-            <table class="table table-hover table-striped">
+            <table id="tabela-mensagens" class="table table-hover table-striped">
             <tbody>
             <?php
-                foreach ($mensagens as $mensagem)
+                if(isset($mensagens))
                 {
-                    partial('/admin/mensagens/_mensagem-table', ['mensagem' => $mensagem]);
+                    foreach ($mensagens as $mensagem)
+                    {
+                        partial('/admin/mensagens/_mensagem-table', ['mensagem' => $mensagem]);
+                    }
                 }
             ?>
             </tbody>
@@ -54,12 +55,10 @@
             <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="fa fa-square-o"></i>
             </button>
             <div class="btn-group">
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-reply"></i></button>
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-share"></i></button>
+            <button type="button" class="btn btn-default btn-sm add-lixeira"><i class="fa fa-trash-o"></i></button>
             </div>
             <!-- /.btn-group -->
-            <button type="button" class="btn btn-default btn-sm"><i class="fa fa-refresh"></i></button>
+            <button type="button" class="btn btn-default btn-sm" onclick="window.location.reload();"><i class="fa fa-refresh"></i></button>
             <div class="pull-right">
             1-50/200
             <div class="btn-group">
@@ -73,4 +72,5 @@
 </div>
 <!-- /. box -->
 
+<?php page_asset('/admin/js/mensagens/_add-favorita'); ?>
 <?php page_asset('/admin/js/mensagens/_mailbox'); ?>

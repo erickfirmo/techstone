@@ -61,7 +61,7 @@
         <i class="fa fa-envelope"></i>
         <span>Mensagens</span>
         <span class="pull-right-container">
-          <small class="label pull-right bg-red">15</small>
+          <small class="label pull-right bg-red">1</small>
         </span>
       </a>
     </li>

@@ -51,19 +51,20 @@ class Model
     public function find($id)
     {
         $db = $this->getPDOConnection();
-        $sql = 'SELECT * FROM '.$this->table.' WHERE id='.$id;
+        $sql = 'SELECT * FROM '.$this->table.' WHERE id="'.$id.'"';
         $stmt = $db->prepare($sql);
         $stmt->execute();
         $register = $stmt->fetch();
         return $this->createObject($register, static::class);
     }
 
-    public function writeFields()
+    public function writeFields($fields)
     {
         $fields = NULL;
         foreach ($this->fields as $key => $field)
         {
-            if(count($this->fields) != $key+1)
+            $i++;
+            if(count($this->fields) != $i)
             {
                 $fields = $fields.' '.$field.'= :'.$field.',';
             } else {
@@ -75,13 +76,24 @@ class Model
 
     public function update(array $updates)
     {    
-        $fields = $this->writeFields();
+        $i = 0;
+        $fields = NULL;
+        foreach ($updates as $field => $update)
+        {  
+            $i++;
+            if(count($updates) != $i)
+            {
+                $fields = $fields.' '.$field.'= :'.$field.',';
+            } else {
+                $fields = $fields.' '.$field.'= :'.$field;
+            }
+        }
         $db = $this->getPDOConnection();
         $sql = 'UPDATE '.$this->table.' SET '.$fields.' WHERE id="'.$this->id.'"';
         $stmt = $db->prepare($sql);
-        foreach ($updates as $key => $update)
+        foreach ($updates as $field => $update)
         {  
-            $stmt->bindValue(':'.$key, $update);
+            $stmt->bindValue(':'.$field, $update);
         }
         $stmt->execute();
     }
@@ -142,10 +154,7 @@ class Model
         } else {
             $_SESSION['PAGINATE'] = false;
         }
-        if(count($registers) > 1)
             return $this->objectsConstruct($registers, static::class);
-        else
-            return $this->createObject($registers, static::class);
     }
 
     public function delete($id)
@@ -223,7 +232,6 @@ class Model
                 array_push($objects, $this->createObject($register, $class_name));
             }
         }
-        
         return $objects;
     }
 
@@ -274,7 +282,6 @@ class Model
         $db = $this->getPDOConnection();
         $sql = 'SELECT pivot.id FROM '.$pivot_table.' AS pivot INNER JOIN '.$parent_table.' AS parent ON pivot.'.$pivot_parent_id.'=parent.id';
         $stmt = $db->prepare($sql);
-        
         $stmt->execute();
         $register = $stmt->fetch();
         $obj = $this->createObject($register, $pivot_entity_name);
@@ -305,7 +312,6 @@ class Model
     {
         $this->setPivot($pivot_entity, $parent_id_a, $this->table);
         $fields = NULL;
-
         foreach ($entity->fields as $key => $field)
         {
             if(count($entity->fields) == $key+1)
@@ -315,7 +321,6 @@ class Model
                 $fields = $fields.' '.$field.', ';
             }
         }
-
         $db = $this->getPDOConnection();
         $sql = 'SELECT '.$entity->table.'.id, '.$fields.' FROM '.$entity->table.' RIGHT JOIN '.$pivot_entity->table.' AS pivot ON pivot.'.$parent_id_a.'='.$this->id.' AND pivot.'.$parent_id_b.'='.$entity->table.'.id WHERE '.$entity->table.'.id IS NOT NULL';
         $stmt = $db->prepare($sql);
@@ -343,7 +348,6 @@ class Model
         return $content;
     }
 
-
     public function seeInDatabase($table, $fields)
     {
         $conditions = '';
@@ -356,7 +360,6 @@ class Model
                 $conditions = $field.'="'.$value.'"';
             } else {
                 $conditions = $conditions.' AND '.$field.'="'.$value.'"';
-
             }
         }
         $db = $this->getPDOConnection();
@@ -366,6 +369,4 @@ class Model
         $register = $stmt->fetch();
         return $this->createObject($register, static::class);
     }
-
-    
 }

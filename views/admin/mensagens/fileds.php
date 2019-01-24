@@ -22,6 +22,7 @@ if(!defined('LAYOUT')) return 'admin';
         <?php partial('admin/mensagens/_tabela', [
             'title' => 'Arquivadas',
             'mensagens' => $mensagens,
+            /*apague*/
         ]); ?>
     </div>
 </div>
