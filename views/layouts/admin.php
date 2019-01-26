@@ -121,6 +121,8 @@ desired effect
 <script src="<?php url('/node_modules/admin-lte/dist/js/adminlte.min.js'); ?>"></script>
 <!-- iCheck 1.0.1 -->
 <script src="<?php url('/node_modules/admin-lte/plugins/iCheck/icheck.min.js'); ?>"></script>
+<!-- SweetAlert -->
+<script src="<?php url('/node_modules/sweetalert/dist/sweetalert.min.js'); ?>"></script>
 
 
 <!-- Page script -->
