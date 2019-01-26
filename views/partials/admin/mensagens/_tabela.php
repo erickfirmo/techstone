@@ -4,7 +4,7 @@
 
     <div class="box-tools pull-right">
         <div class="has-feedback">
-        <input type="text" class="form-control input-sm" placeholder="Buscar">
+        <input id="dinamic-filter" type="text" class="form-control input-sm" placeholder="Buscar">
         <span class="glyphicon glyphicon-search form-control-feedback"></span>
         </div>
     </div>
@@ -74,3 +74,4 @@
 
 <?php page_asset('/admin/js/mensagens/_add-favorita'); ?>
 <?php page_asset('/admin/js/mensagens/_mailbox'); ?>
+<?php page_asset('/admin/js/mensagens/_dinamic-filter'); ?>
