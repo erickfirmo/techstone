@@ -76,6 +76,24 @@ class MensagemController extends Controller
                 'favorita' => 'n'
             ]);
         }
+    }
+
+
+    public function toggle_favorita_single($id)
+    {
+
+        $mensagem = (new Mensagem())->find($id);
+        var_dump($mensagem);
+        if($mensagem->favorita == 'n')
+        {
+            $mensagem->update([
+                'favorita' => 's'
+            ]);
+        } elseif($mensagem->favorita == 's') {
+            $mensagem->update([
+                'favorita' => 'n'
+            ]);
+        }
         return $this->route()->back();
     }
 
@@ -98,8 +116,8 @@ class MensagemController extends Controller
     public function restaurar($id)
     {
         (new Mensagem())->find($id)->restore();  
-        $this->alert('success', 'Mensagem restaurada a Caixa de Entrada com successo !');
-        return $this->route()->redirect('/admin/mensagens/show');
+        $this->alert('success', 'Mensagem restaurada a caixa de entrada com successo !');
+        return $this->route()->redirect('/admin/admin/mensagens/show');
     }
 
     public function destroy_multi()

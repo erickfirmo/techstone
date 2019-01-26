@@ -98,12 +98,17 @@ return [
         'method' => 'POST'
     ],
 
+    '/admin/mensagens/toggle-favorita-single/$id/' => [
+        'action' => 'Admin\MensagemController@toggle_favorita_single',
+        'method' => 'POST'
+    ],
+
     '/admin/mensagens/destroy_multi/' => [
         'action' => 'Admin\MensagemController@destroy_multi',
         'method' => 'POST'
     ],
 
-    '/admin/mensagens/restaurar/' => [
+    '/admin/mensagens/restaurar/$id/' => [
         'action' => 'Admin\MensagemController@restaurar',
         'method' => 'POST'
     ],
