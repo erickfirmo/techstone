@@ -90,7 +90,7 @@ class MensagemController extends Controller
 
     public function add_lixeira_single($id)
     {
-        $variavel = (new Mensagem())->find($id)->softDelete();
+        (new Mensagem())->find($id)->softDelete();
         $this->alert('success', 'Mensagem adicionada a lixeira !');
         return $this->route()->redirect('/admin/mensagens'); 
     }
@@ -111,9 +111,8 @@ class MensagemController extends Controller
         }
     }
 
-    public function destroy_single()
+    public function destroy_single($id)
     {
-        $id = $this->request()->input('mensagem_id');
         (new Mensagem())->delete($id);
         return $this->route()->redirect('/admin/mensagens/');
     }

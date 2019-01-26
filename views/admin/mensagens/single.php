@@ -61,12 +61,12 @@ if(!defined('LAYOUT')) return 'admin';
                 <div class="pull-right">
                     
                 </div>
-                <form action="<?php url('/admin/mensagens/add-favorita'); ?>" method="POST" class="d-inline" id="form-favorita">
+                <form action="<?php url("/admin/mensagens/add-favorita/$mensagem->id"); ?>" method="POST" class="d-inline" id="form-favorita">
                     <input type="hidden" name="_token" value="<?php token(); ?>">
                     <input type="hidden" name="mensagem_id" value="<?php echo $mensagem->id; ?>">
                     <button type="submit" class="btn btn-default"><i class="fa fa-star-o"></i> Adicionar aos Favoritos</button>
                 </form>
-                <form action="<?php url('/admin/mensagens/destroy-single'); ?>" method="POST" class="d-inline" id="form-lixeira">
+                <form action="<?php url("/admin/mensagens/add-lixeira-single/$mensagem->id"); ?>" method="POST" class="d-inline" id="form-lixeira">
                     <input type="hidden" name="_token" value="<?php token(); ?>">
                     <input type="hidden" name="mensagem_id" value="<?php echo $mensagem->id; ?>">
                     <button type="submit" class="btn btn-default"><i class="fa fa-trash-o"></i> Excluir</button>

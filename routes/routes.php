@@ -78,12 +78,12 @@ return [
         'method' => 'GET'
     ],
 
-    '/admin/mensagens/add-lixeira-single/' => [
+    '/admin/mensagens/add-lixeira-single/$id/' => [
         'action' => 'Admin\MensagemController@add_lixeira_single',
         'method' => 'POST'
     ],
 
-    '/admin/mensagens/destroy-single/' => [
+    '/admin/mensagens/destroy-single/$id/' => [
         'action' => 'Admin\MensagemController@destroy_single',
         'method' => 'POST'
     ],
