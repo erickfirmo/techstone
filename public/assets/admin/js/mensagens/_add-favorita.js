@@ -19,17 +19,12 @@ $('.add-favorita').on('click', function() {
                         favorite_icon.removeClass('fa-star-o');
                         favorite_icon.addClass('fa-star');
                         //alert('A mensagem foi adicionada aos favoritos.');
-                        swal('A mensagem foi adicionada aos favoritos.', " ", "success", {
+                        swal('A mensagem foi adicionada aos favoritos !', " ", "success", {
 							buttons: false,
 							type: "success",
      						timer: 1200
 						});
-
-                        
                     } else if(favorite_icon.hasClass('fa-star-o') && !favorite_icon.hasClass('fa-star')) {
-                        
-
-
                         favorite_icon.removeClass('fa-star');
                         favorite_icon.addClass('fa-star-o');
                         //alert('A mensagem foi removida dos favoritos !');
@@ -40,11 +35,18 @@ $('.add-favorita').on('click', function() {
 						});
                     }
                 } else {
-                    alert('Ops, algo deu errado !');
+                    swal("Ops, algo deu errado !", {
+                        icon: "warning",
+                        timer: 1200,
+                        buttons: false,
+                      }); 
                 }
             }
         });
     } else {
-        alert('Selecione uma mensagem !');
+        swal("Selecione uma mensagem !", {
+            timer: 1200,
+            buttons: false,
+          });
     }
 });

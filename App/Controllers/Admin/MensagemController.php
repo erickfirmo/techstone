@@ -63,9 +63,7 @@ class MensagemController extends Controller
     public function toggle_favorita()
     {
         $id = $_POST['mensagem_id'];
-
         $mensagem = (new Mensagem())->find($id);
-        var_dump($mensagem);
         if($mensagem->favorita == 'n')
         {
             $mensagem->update([
@@ -78,12 +76,9 @@ class MensagemController extends Controller
         }
     }
 
-
     public function toggle_favorita_single($id)
     {
-
         $mensagem = (new Mensagem())->find($id);
-        var_dump($mensagem);
         if($mensagem->favorita == 'n')
         {
             $mensagem->update([

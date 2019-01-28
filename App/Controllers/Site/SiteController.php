@@ -64,6 +64,7 @@ class SiteController extends Controller
         $mensagem->empresa = $this->request()->input('empresa');
         $mensagem->whatsapp = $this->request()->input('whatsapp');
         $mensagem->telefone = $this->request()->input('telefone');
+        $mensagem->favorita = 'n';
         $mensagem->opcao_contato = $this->request()->input('opcao_contato');  
         $mensagem->conteudo = $this->request()->input('conteudo');        
         $mensagem->save();
