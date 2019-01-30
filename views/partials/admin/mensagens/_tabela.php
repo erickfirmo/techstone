@@ -19,6 +19,9 @@
             <div class="btn-group">
             <button type="button" class="btn btn-default btn-sm <?php echo $destroy_action; ?>"><i class="fa fa-trash-o"></i></button>
             </div>
+            <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm <?php echo isset($restore_class) ? $restore_class : ''; ?>"><i class="fa fa-undo"></i></button>
+            </div>
             <!-- /.btn-group -->
             <button type="button" class="btn btn-default btn-sm" onclick="window.location.reload();"><i class="fa fa-refresh"></i></button>
             <div class="pull-right">
@@ -56,6 +59,9 @@
             </button>
             <div class="btn-group">
             <button type="button" class="btn btn-default btn-sm add-lixeira"><i class="fa fa-trash-o"></i></button>
+            </div>
+            <div class="btn-group">
+            <button type="button" class="btn btn-default btn-sm <?php echo isset($restore_class) ? $restore_class : ''; ?>"><i class="fa fa-undo"></i></button>
             </div>
             <!-- /.btn-group -->
             <button type="button" class="btn btn-default btn-sm" onclick="window.location.reload();"><i class="fa fa-refresh"></i></button>

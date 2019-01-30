@@ -113,6 +113,11 @@ return [
         'method' => 'POST'
     ],
 
+    '/admin/mensagens/restaurar_multi/' => [
+        'action' => 'Admin\MensagemController@restaurar_multi',
+        'method' => 'POST'
+    ],
+
     '/admin/mensagens/destroy-multi/' => [
         'action' => 'Admin\MensagemController@destroy_multi',
         'method' => 'POST'

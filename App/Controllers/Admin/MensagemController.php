@@ -115,6 +115,15 @@ class MensagemController extends Controller
         return $this->route()->redirect('/admin/admin/mensagens/show');
     }
 
+    public function restaurar_multi()
+    {
+        $mensagens_id = explode('|', $_POST['mensagens_id']);
+        foreach($mensagens_id as $id)
+        {
+            (new Mensagem())->find($id)->restore();
+        }
+    }
+
     public function destroy_multi()
     {
         $mensagens_id = explode('|', $_POST['mensagens_id']);
