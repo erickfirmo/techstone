@@ -14,8 +14,8 @@ class MensagemController extends Controller
 
     public function all()
     {
-        $mensagens = (new Mensagem())->all();
-        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
+        $mensagens = (new Mensagem())->all(['id', 'DESC']);
+        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
         $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
         return $this->view('/admin/mensagens/all', [
             'mensagens' => $mensagens,
@@ -28,7 +28,7 @@ class MensagemController extends Controller
     {
         $mensagem = (new Mensagem())->find($id);
         $mensagens = (new Mensagem())->all();
-        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
+        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
         $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
         return $this->view('/admin/mensagens/single', [
             'mensagem' => $mensagem,
@@ -40,9 +40,9 @@ class MensagemController extends Controller
 
     public function favoritas()
     {
-        $mensagens = (new Mensagem())->all();
-        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
-        $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
+        $mensagens = (new Mensagem())->all(['id', 'DESC']);
+        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s" ORDER BY id DESC');
         return $this->view('/admin/mensagens/favorites', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
@@ -52,8 +52,8 @@ class MensagemController extends Controller
 
     public function lixeira()
     {
-        $mensagens = (new Mensagem())->all();
-        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1);
+        $mensagens = (new Mensagem())->all(['id', 'DESC']);
+        $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
         return $this->view('/admin/mensagens/lixeira', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,

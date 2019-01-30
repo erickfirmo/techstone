@@ -98,9 +98,9 @@ class Model
         $stmt->execute();
     }
 
-    public function all($is_deleted=0)
+    public function all($order=['id', 'ASC'])
     {
-        $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted);
+        $sql = 'SELECT * FROM '.$this->table.' ORDER BY '.$order[0].' '.$order[1];
         $db = $this->getPDOConnection();
         $stmt = $db->prepare($sql);
         $stmt->execute();
@@ -108,7 +108,7 @@ class Model
         if($this->paginate)
         {
             $this->setPagination($registers);
-            $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted).' LIMIT '.$this->getLimit();
+            $sql = 'SELECT * FROM '.$this->table.' LIMIT '.$this->getLimit().' ORDER BY '.$order[0].' '.$order[1];
             if($_SESSION['PAGE'] > 1)
             {
                 $sql = $sql.' OFFSET '.($_SESSION['PAGE'] - 1)*$this->getLimit();
@@ -123,9 +123,28 @@ class Model
         return $this->objectsConstruct($registers, $this->getNameOfClass());
     }
 
-    public function all_deleted($is_deleted)
+    public function all_deleted($is_deleted=0, $order=['id', 'ASC'])
     {
-        return $this->all($is_deleted);
+        $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted).' ORDER BY '.$order[0].' '.$order[1];
+        $db = $this->getPDOConnection();
+        $stmt = $db->prepare($sql);
+        $stmt->execute();
+        $registers = $stmt->fetchAll();
+        if($this->paginate)
+        {
+            $this->setPagination($registers);
+            $sql = 'SELECT * FROM '.$this->table.$this->verifySoftDelete($is_deleted).' ORDER BY '.$order[0].' '.$order[1].' LIMIT '.$this->getLimit();
+            {
+                $sql = $sql.' OFFSET '.($_SESSION['PAGE'] - 1)*$this->getLimit();
+            }
+            $_SESSION['PAGINATE'] = true;
+            $stmt = $db->prepare($sql);
+            $stmt->execute();
+            $registers = $stmt->fetchAll(); 
+        } else {
+            $_SESSION['PAGINATE'] = false;
+        }
+        return $this->objectsConstruct($registers, $this->getNameOfClass());
     }
 
     public function verifySoftDelete($level)
