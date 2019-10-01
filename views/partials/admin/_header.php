@@ -25,14 +25,14 @@
         <!-- Menu Toggle Button -->
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
           <!-- The user image in the navbar-->
-          <img src="<?php url('/node_modules/admin-lte/dist/img/user2-160x160.jpg'); ?>" class="user-image" alt="User Image">
+          <img src="https://avatars3.githubusercontent.com/u/34639603?s=460&v=4" class="user-image" alt="User Image">
           <!-- hidden-xs hides the username on small devices so only the image appears. -->
           <span class="hidden-xs"><?php auth('name').auth('lastname'); ?></span>
         </a>
         <ul class="dropdown-menu">
           <!-- The user image in the menu -->
           <li class="user-header">
-            <img src="<?php url('/node_modules/admin-lte/dist/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
+            <img src="https://avatars3.githubusercontent.com/u/34639603?s=460&v=4" class="img-circle" alt="User Image">
 
             <p>
               <?php auth('name').auth('lastname'); ?>- Web Developer
