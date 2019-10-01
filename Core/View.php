@@ -34,6 +34,7 @@ class View
         $this->setView($view);
         $this->setLayout(include '../views'.$view.'.php');
         include '../views/layouts/'.$this->getLayout().'.php';
+        return $this;
     }
 
     protected function tokenGenerator()
