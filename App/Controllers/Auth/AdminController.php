@@ -16,6 +16,10 @@ class AdminController extends Controller
 
     public function showLoginForm()
     {
+        if(isset($_SESSION['login@admin'])){
+            return $this->route()->redirect('/admin/home');
+        }
+        
         return $this->view('/admin/login_form');
     }
 
@@ -50,6 +54,7 @@ class AdminController extends Controller
             'email' => 'required',
             'password' => 'required',
         ]);
+
         $email = $this->request()->input('email');
         $admin = (new Admin())->findBy('email="'.$email.'"');
         if($admin != NULL)
