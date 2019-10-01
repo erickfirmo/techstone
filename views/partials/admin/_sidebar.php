@@ -33,7 +33,7 @@
   <ul class="sidebar-menu" data-widget="tree">
     <li class="header">NAVEGAÇÃO</li>
     <!-- Optionally, you can add icons to the links -->
-    <li class="<?php classActiveUrl('/'); ?>">
+    <li class="<?php classActiveUrl('/admin/home'); ?>">
       <a href="<?php url('/admin/home'); ?>">
         <i class="fa fa-link"></i>
         <span>Home</span>
@@ -56,7 +56,7 @@
         </li>
       </ul>
     </li>
-    <li class="<?php classActiveUrl('/'); ?>">
+    <li class="<?php classActiveUrl('/admin/mensagens'); ?>">
       <a href="<?php url('/admin/mensagens'); ?>">
         <i class="fa fa-envelope"></i>
         <span>Mensagens</span>
