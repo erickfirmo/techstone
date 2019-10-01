@@ -1,5 +1,3 @@
-var mensagens_id = '';
-var _token = null;
 var check_mensagens = $('input.check-mensagem').parent().find('input');
 
 $('.destroy-mensagem').on('click', function() {
