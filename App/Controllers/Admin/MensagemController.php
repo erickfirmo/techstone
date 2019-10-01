@@ -12,16 +12,29 @@ class MensagemController extends Controller
         $this->middleware('admin');
     }
 
-    public function all()
+    public function index()
     {
         $mensagens = (new Mensagem())->all(['id', 'DESC']);
+
+        return $this->view('/admin/mensagens/index', [
+            'mensagens' => $mensagens
+        ]);
+    }
+
+
+    public function all()
+    {
+        /*$mensagens = (new Mensagem())->all_deleted(0, ['id', 'DESC']);
         $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
-        $mensagens_favoritas = (new Mensagem())->where('favorita="s"');
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s" AND is_deleted=0');
         return $this->view('/admin/mensagens/all', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
             'mensagens_favoritas' => $mensagens_favoritas,
-        ]);
+        ]);*/
+        $mensagens = (new Mensagem())->all(['id', 'DESC']);
+        echo json_encode($mensagens);
+
     }
 
     public function single($id)
@@ -42,7 +55,7 @@ class MensagemController extends Controller
     {
         $mensagens = (new Mensagem())->all(['id', 'DESC']);
         $mensagens_na_lixeira = (new Mensagem())->all_deleted(1, ['id', 'DESC']);
-        $mensagens_favoritas = (new Mensagem())->where('favorita="s" ORDER BY id DESC');
+        $mensagens_favoritas = (new Mensagem())->where('favorita="s" AND is_deleted=0 ORDER BY id DESC');
         return $this->view('/admin/mensagens/favorites', [
             'mensagens' => $mensagens,
             'mensagens_na_lixeira' => $mensagens_na_lixeira,
@@ -64,15 +77,25 @@ class MensagemController extends Controller
     {
         $id = $_POST['mensagem_id'];
         $mensagem = (new Mensagem())->find($id);
-        if($mensagem->favorita == 'n')
+
+        if($mensagem != null)
         {
-            $mensagem->update([
-                'favorita' => 's'
-            ]);
-        } elseif($mensagem->favorita == 's') {
-            $mensagem->update([
-                'favorita' => 'n'
-            ]);
+            if($mensagem->favorita == 'n')
+            {
+                $mensagem->update([
+                    'favorita' => 's'
+                ]);
+                
+                echo json_encode($id);
+
+            } elseif($mensagem->favorita == 's') {
+                
+                $mensagem->update([
+                    'favorita' => 'n'
+                ]);
+
+                echo json_encode($id);
+            }
         }
     }
 
@@ -97,8 +120,19 @@ class MensagemController extends Controller
         $mensagens_id = explode('|', $_POST['mensagens_id']);
         foreach($mensagens_id as $id)
         {
-            (new Mensagem())->find($id)->softDelete();
+            if($id)
+                $mensagem = (new Mensagem())->find($id);
+
+                if($mensagem->favorita == 's')
+                $mensagem->update([
+                    'favorita' => 'n'
+                ]);
+                
+                $mensagem->softDelete();
+
         }
+        
+        echo json_encode($mensagens_id);
     }
 
     public function add_lixeira_single($id)
