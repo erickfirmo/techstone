@@ -7,7 +7,7 @@
   <!-- Sidebar user panel (optional) -->
   <div class="user-panel">
     <div class="pull-left image">
-      <img src="<?php url('/node_modules/admin-lte/dist/img/user2-160x160.jpg'); ?>" class="img-circle" alt="User Image">
+      <img src="https://avatars3.githubusercontent.com/u/34639603?s=460&v=4" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
       <p><?php auth('name').auth('lastname'); ?></p>
