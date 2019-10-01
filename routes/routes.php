@@ -49,7 +49,22 @@ return [
         'method' => 'POST'
     ],
 
+
+    /* rotas user */
+
+    '/home/' => [
+        'action' => 'HomeController@index',
+        'method' => 'GET'
+    ],
+
     /* rotas admin */
+
+    '/admin/' => [
+        'action' => 'Admin\HomeController@index',
+        'method' => 'GET'
+    ],
+
+    
 
     '/admin/home/' => [
         'action' => 'Admin\HomeController@index',
@@ -59,6 +74,11 @@ return [
     /* rotas das mensagens */
 
     '/admin/mensagens/' => [
+        'action' => 'Admin\MensagemController@index',
+        'method' => 'GET'
+    ],
+
+    '/admin/mensagens/all/' => [
         'action' => 'Admin\MensagemController@all',
         'method' => 'GET'
     ],
