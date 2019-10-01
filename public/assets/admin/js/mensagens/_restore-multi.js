@@ -1,5 +1,4 @@
-var mensagens_id = '';
-var _token = null;
+
 var check_mensagens = $('input.check-mensagem').parent().find('input');
 
 $('.restore_class').on('click', function() {
@@ -31,6 +30,7 @@ $('.restore_class').on('click', function() {
                                 timer: 4000,
                                 icon: "success",
                               });
+                              
                         } else {
                             swal("Ops, algo deu errado !", {
                                 icon: "warning",
@@ -38,7 +38,12 @@ $('.restore_class').on('click', function() {
                                 buttons: false,
                               }); 
                         }
+
+
+                        setInterval(function(){window.location.reload()}, 3000);
+
                     }
+                    
                 });
             } else {
               swal("Nada foi alterado !", {
