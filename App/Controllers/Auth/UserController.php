@@ -16,6 +16,12 @@ class UserController extends Controller
 
     public function showLoginForm()
     {
+        if(isset($_SESSION['login@user'])){
+
+            if(is_null($_SESSION['login@user']))
+            return $this->route()->redirect('/home');
+        }
+
         return $this->view('/user/login_form');
     }
 
